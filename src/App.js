@@ -27,7 +27,7 @@ class App extends Component {
       return <Loading />
     } else {
       return (
-        <BrowserRouter basename='/'>
+        <BrowserRouter>
           <Switch>
             <Route exact path={"/"} component={Homepage} />
             <Route exact path={"/vogether"} component={Vogether} />
