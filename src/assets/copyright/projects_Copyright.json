@@ -1,0 +1,114 @@
+{
+    
+    "smoothHire": {
+        "challenge": "How to hire top tier technical talents?",
+        "descrip": "This is a job board designed to get company more millennial technical talents",
+        "name": "smoothHire",
+        "myrole": [
+            "Sourced relevant players and conducted interviews",
+            "Designed experimentations to validate risky assumptions",
+            "Decided key user flows then made prototype conveys the value"
+        ],
+        "for": "UX experimentation",
+        "title": [
+            "Problem Statement",
+            "User Research",
+            "Industrial Research",
+            "Ideation",
+            "Risk analysis",
+            "Experimentation",
+            "Sketch",
+            "Prototype",
+            "Product demo"
+        ],
+        "content": {
+            "research": [
+                "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found"
+            ]
+        },
+        "otherProjects": [
+            {
+                "name": "Smooth Hire",
+                "link": "/smoothHire"
+            },
+            {
+                "name": "Vogether",
+                "link": "/vogether"
+            },
+            {
+                "name": "Flocker",
+                "link": "/flocker"
+            }
+        ]
+    },
+    "vogether": {
+        "challenge": "What should an interface like to help people seek immediate attention",
+        "descrip": "Inspired by the behavior of people watching, Vogether creates an experience that contains motivation and satisfaction brought by people watching.",
+        "name": "Vogether",
+        "myrole": [
+            "Storyboaring according to the key takeaways from user research",
+            "Conducted usability test to improve the user experience of the UI",
+            "Designed visual of interface, including color layout icon etc"
+        ],
+        "for": "Mobile app",
+        "title": [
+            "User Research",
+            "Competitive position",
+            "Storyboarding",
+            "Blockframes",
+            "Prototype",
+            "User test and iteration",
+            "User flow",
+            "Product demo",
+            "Privacy concerns"
+        ],
+        "content": {
+            "research": [
+                "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found"
+            ]
+        },
+        "otherProjects": [
+            {
+                "name": "Smooth Hire",
+                "link": "/smoothHire"
+            }
+        ]
+    },
+    "campy": {
+        "challenge": "What should an interface like to help people seek immediate attention",
+        "descrip": "Inspired by the behavior of people watching, Vogether creates an experience that contains motivation and satisfaction brought by people watching.",
+        "name": "Vogether",
+        "myrole": [
+            "Storyboaring according to the key takeaways from user research",
+            "Conducted usability test to improve the user experience of the UI",
+            "Designed visual of interface, including color layout icon etc"
+        ],
+        "for": "Mobile app",
+        "title": [
+            "User Research",
+            "Competitive position",
+            "Storyboarding",
+            "Blockframes",
+            "Prototype",
+            "User test and iteration",
+            "User flow",
+            "Product demo",
+            "Privacy concerns"
+        ],
+        "content": {
+            "research": [
+                "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found"
+            ]
+        },
+        "otherProjects": [
+            {
+                "name": "Smooth Hire",
+                "link": "/smoothHire"
+            },
+            {
+                "name": "Flocker",
+                "link": "/flocker"
+            }
+        ]
+    }
+}
