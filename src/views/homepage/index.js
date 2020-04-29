@@ -33,6 +33,7 @@ const row = {
 }
 
 class Homepage extends React.Component {
+
     state = {
         password: '0',
         background: 0,
