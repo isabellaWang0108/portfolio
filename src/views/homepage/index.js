@@ -39,19 +39,14 @@ class Homepage extends React.Component {
         background: 0,
         timeLineHeight: $(document).height()
     }
-    componentDidMount() {
-        this.hello();
-    }
 
-    hello = () => {
-        console.log('homepage component is running')
-    }
     handleScroll = e => {
         e.preventDefault();
         $('#landingPart').css({
             'display': 'flex',
             'marginTop': (10 - (this.state.timeLineHeight - $('#Thesis').position().top) * 0.01) + "vh"
         })
+        $("#contactPart").css('display', 'none');
 
         $('#backgrounds').css('opacity', 1)
         this.setState({ timeLineHeight: $(document).height() })
@@ -67,6 +62,7 @@ class Homepage extends React.Component {
         }
         // transit BG of coder in page's in
         if (0 > $('#coder').position().top) {
+            $("#contactPart").css('display', 'flex');
             this.setState({
                 background: 2,
                 timeLineHeight: 300
@@ -78,7 +74,6 @@ class Homepage extends React.Component {
         return (
 
             <div id="parallaxScroll" onScroll={this.handleScroll}>
-                {console.log('homepage return is running')}
                 <NavigationBar href="#contactPart" />
                 <TimeLine height={this.state.timeLineHeight} />
                 <div id="HP_container" className='HP_container' >
@@ -249,7 +244,6 @@ class Homepage extends React.Component {
 
                     {/* contact */}
                     <div style={windowHeight} className="sessionContainer white contactPart">
-                        <div className="landingPartscroll"></div>
                         <div id="contactPart">
 
                             <div style={row}>
@@ -268,7 +262,6 @@ class Homepage extends React.Component {
                                     <img src={Linkedin} alt="icon"></img>
                                 </a>
                             </div>
-
 
 
                         </div>
