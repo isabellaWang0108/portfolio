@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 import $ from 'jquery';
 import "../../css/index.css"
 
@@ -29,17 +29,18 @@ const windowHeight = {
 }
 const row = {
     marginLeft: '10%',
-    marginTop:24
+    marginTop: 24
 }
+console.log('homepage is running')
 
-class Homepage extends Component {
+class Homepage extends React.Component {
     state = {
         password: '0',
         background: 0,
         timeLineHeight: $(document).height()
     }
 
-
+    
     handleScroll = e => {
         e.preventDefault();
         $('#landingPart').css({
@@ -72,6 +73,7 @@ class Homepage extends Component {
         return (
 
             <div id="parallaxScroll" onScroll={this.handleScroll}>
+                  {console.log('homepage return is running')}
                 <NavigationBar href="#contactPart" />
                 <TimeLine height={this.state.timeLineHeight} />
                 <div id="HP_container" className='HP_container' >
@@ -244,23 +246,23 @@ class Homepage extends Component {
                     <div style={windowHeight} className="sessionContainer white contactPart">
                         <div className="landingPartscroll"></div>
                         <div id="contactPart">
-         
+
                             <div style={row}>
-                                    <h2 className="pink"> wangxbella0108@gmail.com</h2>
-                                    <h2 className="pink"> +1 (908) 391 – 6750</h2>
-                                </div>
+                                <h2 className="pink"> wangxbella0108@gmail.com</h2>
+                                <h2 className="pink"> +1 (908) 391 – 6750</h2>
+                            </div>
 
-                                <div style={row}>
-                                    <a href="https://github.com/wangx733">
-                                        <img src={Github} alt="icon"></img>
-                                    </a>
-                                </div>
+                            <div style={row}>
+                                <a href="https://github.com/wangx733">
+                                    <img src={Github} alt="icon"></img>
+                                </a>
+                            </div>
 
-                                <div style={row}>
-                                    <a href="https://www.linkedin.com/in/isabella-w-310181149/">
-                                        <img src={Linkedin} alt="icon"></img>
-                                    </a>
-                                </div>
+                            <div style={row}>
+                                <a href="https://www.linkedin.com/in/isabella-w-310181149/">
+                                    <img src={Linkedin} alt="icon"></img>
+                                </a>
+                            </div>
 
 
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 
@@ -36,7 +36,7 @@ const container = {
     height: "95vh"
 }
 
-class Vogether extends Component {
+class Vogether extends React.Component {
 
     onClick = (e) => {
         e.preventDefault();

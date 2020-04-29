@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import Navi from "../../../components/navi"
@@ -30,7 +30,7 @@ const container={
     height:"95vh"
 }
 
-class Recruitment extends Component {
+class Recruitment extends React.Component {
 
 
     onClick = (e) => {
