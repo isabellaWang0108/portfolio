@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Carousel from 'react-bootstrap/Carousel'
 
 import Navi from "../../../components/navi"
 import Paragraph from "../../../components/paragraph"
@@ -10,6 +11,7 @@ import NavigationBar from "../../../components/navigation"
 
 import CampyFeature from "../../../assets/images/Thesis/landingPg.png"
 // import pro1 from "../../../assets/images/campy/logo.png"
+import Cyborg from "../../../assets/images/Thesis/cyborg.gif"
 import $ from 'jquery';
 
 const container={
@@ -97,49 +99,49 @@ class Recruitment extends React.Component {
                         name={Copyright.campy.name}
                         for={Copyright.campy.for} />
 
-                    <Paragraph banner={CampyFeature} title={Copyright.campy.title[0]} val="pp0" class="pp0">
+                    <Paragraph banner={Cyborg} title={Copyright.campy.title[0]} val="pp0" class="pp0">
                         <p>
-                           hello </p>
+                        {Copyright.campy.paragraph1} </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[1]} val="pp1" class="pp1">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph2}  </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[2]} val="pp2" class="pp2">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph3}  </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[3]} val="pp3" class="pp3">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph4}  </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[4]} val="pp4" class="pp4">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph5}  </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[5]} val="pp5" class="pp5">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph6}  </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[6]} val="pp6" class="pp6">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph7}  </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[7]} val="pp7" class="pp7">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph8}  </p>
 
                     </Paragraph>
                     <Paragraph banner={CampyFeature} title={Copyright.campy.title[8]} val="pp8" class="pp8">
                         <p>
-                            hi  </p>
+                        {Copyright.campy.paragraph9}  </p>
 
                     </Paragraph>
 

@@ -20,11 +20,7 @@
             "Prototype",
             "Product demo"
         ],
-        "content": {
-            "research": [
-                "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found"
-            ]
-        },
+        "content": "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found",
         "otherProjects": [
             {
                 "name": "Smooth Hire",
@@ -87,20 +83,7 @@
             "Iteration",
             "Future"
         ],
-        "paragraph1": {
-            "research": [
-                "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found"
-            ]
-        },
-        "paragraph2": [
-            {
-                "name": "Smooth Hire",
-                "link": "/smoothHire"
-            },
-            {
-                "name": "Flocker",
-                "link": "/flocker"
-            }
-        ]
+        "paragraph1": "As the internet becomes ubiquitous and software gets smarter, it raises the question that what does it mean to live with all these laptops, smartphones and other devices? Some people think softwares will dominate the world and terminate human civilization, while others think computers will be embedded into humans and turn them into cyborgs. Is it true?",
+        "paragraph2": "In order to answer that question, I narrowed my target as designers and looked into how far is the technology going in term of being able to replace human."
     }
 }

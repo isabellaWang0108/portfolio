@@ -125,7 +125,7 @@ class Recruitment extends React.Component {
 
                     <Paragraph banner={pro2} title={Copyright.smoothHire.title[1]} val="pp1" class="pp1">
                         <p> 
-                        {Copyright.smoothHire.content[0]}
+                        {Copyright.smoothHire.content}
                         </p>
 
                     </Paragraph>
