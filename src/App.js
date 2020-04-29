@@ -14,11 +14,9 @@ class App extends Component {
   constructor() {
     super();
     this.state = { isLoading: true }
-  }
-
-  componentDidMount() {
     setTimeout(() => { this.setState({ isLoading: false }) }, 2000)
   }
+
 
 
   render() {
@@ -28,11 +26,13 @@ class App extends Component {
     } else {
       return (
         <BrowserRouter>
-          <Switch>
-            <Route exact path={"/"} component={Homepage} />
-            <Route exact path={"/vogether"} component={Vogether} />
-            <Route exact path={"/smoothHire"} component={Recruitment} />
-          </Switch>
+          <div>
+            <Switch>
+              <Route exact path={"/"} component={Homepage} />
+              <Route exact path={"/vogether"} component={Vogether} />
+              <Route exact path={"/smoothHire"} component={Recruitment} />
+            </Switch>
+          </div>
         </BrowserRouter>
       )
     }
