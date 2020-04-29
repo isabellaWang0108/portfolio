@@ -31,7 +31,6 @@ const row = {
     marginLeft: '10%',
     marginTop: 24
 }
-console.log('homepage is running')
 
 class Homepage extends React.Component {
     state = {
@@ -39,8 +38,13 @@ class Homepage extends React.Component {
         background: 0,
         timeLineHeight: $(document).height()
     }
+    componentDidMount() {
+        this.hello();
+    }
 
-    
+    hello = () => {
+        console.log('homepage component is running')
+    }
     handleScroll = e => {
         e.preventDefault();
         $('#landingPart').css({
@@ -73,7 +77,7 @@ class Homepage extends React.Component {
         return (
 
             <div id="parallaxScroll" onScroll={this.handleScroll}>
-                  {console.log('homepage return is running')}
+                {console.log('homepage return is running')}
                 <NavigationBar href="#contactPart" />
                 <TimeLine height={this.state.timeLineHeight} />
                 <div id="HP_container" className='HP_container' >
