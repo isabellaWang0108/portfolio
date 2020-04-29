@@ -86,7 +86,7 @@ class Vogether extends React.Component {
 
                 {/* navigation bar ==============================================================================================  */}
                 <div id="navi" className="animated slideInDown">
-                    <div id="content">
+                    <div id="content" style={{ background: '#FDF4E8'}}>
                         <ul>Design Process
                             {Copyright.vogether.title.map((item, index) => {
                             return (

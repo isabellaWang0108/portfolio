@@ -1,5 +1,4 @@
 {
-    
     "smoothHire": {
         "challenge": "How to hire top tier technical talents?",
         "descrip": "This is a job board designed to get company more millennial technical talents",
@@ -75,32 +74,25 @@
         ]
     },
     "campy": {
-        "challenge": "What should an interface like to help people seek immediate attention",
-        "descrip": "Inspired by the behavior of people watching, Vogether creates an experience that contains motivation and satisfaction brought by people watching.",
-        "name": "Vogether",
-        "myrole": [
-            "Storyboaring according to the key takeaways from user research",
-            "Conducted usability test to improve the user experience of the UI",
-            "Designed visual of interface, including color layout icon etc"
-        ],
-        "for": "Mobile app",
+        "descrip": "A year long design research project based on the research of current technology's implementation and conceptual mechanization.",
+        "name": "Thesis – What will we become, now that life means living with computers? ",
         "title": [
-            "User Research",
-            "Competitive position",
-            "Storyboarding",
-            "Blockframes",
-            "Prototype",
-            "User test and iteration",
-            "User flow",
-            "Product demo",
-            "Privacy concerns"
+            "Topic refinement",
+            "Case study I",
+            "Ideation I",
+            "Experiment",
+            "Evaluation",
+            "Case study II",
+            "Ideation II",
+            "Iteration",
+            "Future"
         ],
-        "content": {
+        "paragraph1": {
             "research": [
                 "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found"
             ]
         },
-        "otherProjects": [
+        "paragraph2": [
             {
                 "name": "Smooth Hire",
                 "link": "/smoothHire"

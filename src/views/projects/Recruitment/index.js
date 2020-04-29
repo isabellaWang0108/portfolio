@@ -29,7 +29,6 @@ const container={
     overflow:'scroll',
     height:"95vh"
 }
-console.log('recruitment is running')
 class Recruitment extends React.Component {
 
 
@@ -81,7 +80,7 @@ class Recruitment extends React.Component {
 
                 {/* navigation bar ==============================================================================================  */}
                 <div id="navi" className="animated slideInDown">
-                    <div id="content">
+                    <div id="content" style={{ background: '#F1F1F1'}}>
                         <ul>Process
                         {Copyright.smoothHire.title.map((item, index) => {
                             return (

@@ -19,7 +19,7 @@ class Navi extends Component {
                 $(".dropdown").text("Project Navigation");
             })
         }
-        if(window.innerWidth > 700){
+        if (window.innerWidth > 700) {
             $("#navi").css("display", "block");
             $(document).on("click", "li", function () {
                 $("#navi").css("display", "block");

@@ -131,15 +131,14 @@ a:hover{
   position:fixed;
   border: 0;
   outline: 0;
-  border-right: .5px solid #979797;
+  border-right: .5px solid #FC2293;
   z-index:8;
 }
 #content{
   position: absolute;
   top:5%;
   left:0;
-  width:100%;
-  background: #dbe9f9;
+  width:99.9%;
 }
 #recommend{
   position: absolute;
@@ -165,7 +164,9 @@ a:hover{
   width:100%;
   height:3em;
   z-index:9;
-box-shadow: 0 2px 28px -2px #9B9B9B;
+  border-bottom-color: #FC2293;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 .dropdown{
   display:none;
