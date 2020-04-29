@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Loading from "./components/loading"
 import Homepage from "./views/homepage"
 
@@ -26,13 +26,13 @@ class App extends Component {
       return <Loading />
     } else {
       return (
-        <BrowserRouter basename='/'>
+        <HashRouter basename='/'>
           <Switch>
             <Route exact path={process.env.PUBLIC_URL + "/"} component={Homepage} />
             <Route exact path={process.env.PUBLIC_URL + "/vogether"} component={Vogether} />
             <Route exact path={process.env.PUBLIC_URL + "/smoothHire"} component={Recruitment} />
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       )
     }
 
