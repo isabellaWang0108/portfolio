@@ -41,7 +41,7 @@
         "descrip": "Inspired by the behavior of people watching, Vogether creates an experience that contains motivation and satisfaction brought by people watching.",
         "name": "Vogether",
         "myrole": [
-            "Storyboaring according to the key takeaways from user research",
+            "Storyboarding according to the key takeaways from user research",
             "Conducted usability test to improve the user experience of the UI",
             "Designed visual of interface, including color layout icon etc"
         ],
@@ -50,7 +50,7 @@
             "User Research",
             "Competitive position",
             "Storyboarding",
-            "Blockframes",
+            "Block Frames",
             "Prototype",
             "User test and iteration",
             "User flow",
@@ -76,14 +76,23 @@
             "Topic refinement",
             "Case study I",
             "Ideation I",
-            "Experiment",
+            "Medium I",
+            "Medium II",
             "Evaluation",
             "Case study II",
             "Ideation II",
             "Iteration",
-            "Future"
+            "What's next?"
         ],
         "paragraph1": "As the internet becomes ubiquitous and software gets smarter, it raises the question that what does it mean to live with all these laptops, smartphones and other devices? Some people think softwares will dominate the world and terminate human civilization, while others think computers will be embedded into humans and turn them into cyborgs. Is it true?",
-        "paragraph2": "In order to answer that question, I narrowed my target as designers and looked into how far is the technology going in term of being able to replace human."
+        "paragraph2": "In order to answer that question, I narrowed my target as designers and looked into how far is the technology going in terms of being able to replace humans. Below is the list of cases that I referred",
+        "paragraph3": "Inspired by the case studies, I started to ideat on how to convey the idea that AI has no chance to replace or terminate humans. I started from a mind map to define the anchor point, then I made a website to vote on my ideas in addition to practicing a visual identity. See web preview below.",
+        "paragraph4": "From days of selecting, changing and turning the idea, I made two works to visually summarize my studies. Inspired by the chemical rocket example in case study I choose to give people a whole picture of the human technology relationship in the digital design field by visualizing a potential model, pipeline and database to implement AI in the design world. The intention of the visualization is to convey a sense of scale then reflect on whether AI is going to terminate the world.",
+        "paragraph5": "This is an experience for non-technical people to experience a data scientist's job: While they do Machine learning, they never know what’s next, why the algorithm failed, when they can beat accuracy records. Once you open the link, you will be in a set of data. Your job is to guess the combination of the letters that functions as commands to make sense of the data points.",
+        "paragraph6": "After reflecting on the subject matter during design in the last two mediums, I reached to a conclusion that technology will never replace humans, what they will become is the best assistant to make human super-human. What does the best assistant look like?",
+        "paragraph7": "In order to imagine the best assistant, I kept focus on designers and did my second round of research. My theory was developed based on the psychological theories and case studies.",
+        "paragraph8": "While doing research and case studies, I sketched out all ideas that pop into my mind.",
+        "paragraph9": " My proposal is a digital companion that lives in the multi-device environment, both on laptop and phone, and that offers different features based on the device's natural character. On the laptop, it generates variations based on computer vision and AI due to the device's better computational performance, saving designers time on tweaking minor changes. On the phone, it scrapes all popular websites and allows designers to search anytime, anywhere without repetition or going back and forth between workspace to websites.",
+        "paragraph10": "The thesis curriculum reaches to the end, but my journey of searching What will we become, now that life means living with computers hasn't had a conclusion. What I have right now is a prototype proposal mapped out in a higher level concept without any engineering. To continue the journey, I decide to join technology companies to keep exploring the relationship of human design and technology."
     }
 }
