@@ -19,11 +19,11 @@ html {
   scroll-behavior: smooth;
 }
 
- h5, a,span,button,p,li,ul,.logo{
+h1, h2, h3,h5, a,span,button,p,li,ul,.logo{
   color:black;
   font-family: SuisseIntl-Regular;
 }
-h1, h2, h3,.bold,ul{
+.bold,ul{
   font-family: SuisseIntl-SemiBold;
   list-style-type:decimal;
 }
