@@ -90,7 +90,7 @@ class Recruitment extends React.Component {
                         })}
                         </ul>
 
-                        <div id="recommend">
+                        {/* <div id="recommend">
                             <br />
                             <ul>More projects like this<br />
                                 
@@ -100,7 +100,7 @@ class Recruitment extends React.Component {
                                     )
                                 })}
                             </ul>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>
@@ -173,8 +173,11 @@ class Recruitment extends React.Component {
                         <p> 
                         </p>
                     </Paragraph>
-                    <br /><br /><br /><br />
 
+                    <Paragraph noImg={true}>
+                    <Link to="/"> View other projects >></Link>
+                    </Paragraph>
+                    <br /><br /><br /><br />
                 </div>
             </div>
         );

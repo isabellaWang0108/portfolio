@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Navi from "../../../components/navi"
 import Paragraph from "../../../components/paragraph"
@@ -198,10 +198,13 @@ class Recruitment extends React.Component {
                         <p>{Copyright.campy.paragraph10} </p>
                         <img src={Campy} width="40%" alt="campy"></img>
                         <br /><br /><br /><br /><br />
+
+                        <Link to="/"> View other projects >></Link>
                     </Paragraph>
 
 
                     <br /><br /><br /><br />
+
 
                 </div>
             </div>

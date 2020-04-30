@@ -274,7 +274,7 @@ font-size: 18px;
 }
 
 .Alllinks{
-  z-index:999;
+  font-size: 21px;
 }
 .pink{
   color:#FC2293;
@@ -286,7 +286,7 @@ font-size: 18px;
   font-family: 'SuisseIntl-SemiBold';
   z-index: 10;
 }
-.HP_descrip{
+.HP_descrip,.Alllinks{
   font-size:21px;
   margin-top: 24px;
   font-family: 'SuisseIntl-Regular';
@@ -385,6 +385,12 @@ font-size: 18px;
   font-size:18px;
   font-weight: bolder;
 }
+.greyCode{
+  color:grey;
+  font-size:21px;
+  font-family: Courier-Regular;
+  font-weight: bolder;
+}
 .pinkCode{
   color:#f92672;
   font-family: Courier-Regular;
@@ -457,7 +463,7 @@ font-size: 18px;
     .HP_Intro{
       font-size: 36px;
     }
-    .HP_descrip{
+    .HP_descrip,.Alllinks,.Alllinks{
       font-size: 18px;
     }
 }
@@ -517,7 +523,7 @@ font-size: 18px;
   .HP_Intro{
     font-size: 28px;
   }
-  .HP_descrip{
+  .HP_descrip,.Alllinks{
     font-size: 16px;
   }
   .img{

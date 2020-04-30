@@ -86,7 +86,7 @@ class Vogether extends React.Component {
 
                 {/* navigation bar ==============================================================================================  */}
                 <div id="navi" className="animated slideInDown">
-                    <div id="content" style={{ background: '#FDF4E8'}}>
+                    <div id="content" style={{ background: '#FDF4E8' }}>
                         <ul>Design Process
                             {Copyright.vogether.title.map((item, index) => {
                             return (
@@ -97,7 +97,7 @@ class Vogether extends React.Component {
                         </ul>
 
 
-                        <div id="recommend">
+                        {/* <div id="recommend">
                             <br />
                             <ul>More projects like this<br />
 
@@ -107,7 +107,7 @@ class Vogether extends React.Component {
                                     )
                                 })}
                             </ul>
-                        </div>
+                        </div> */}
 
                     </div>
                 </div>
@@ -200,6 +200,9 @@ class Vogether extends React.Component {
 </p>
                     </Paragraph>
 
+                    <Paragraph noImg={true}>
+                        <Link to="/"> View other projects >></Link>
+                    </Paragraph>
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 

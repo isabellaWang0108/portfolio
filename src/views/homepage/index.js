@@ -32,6 +32,7 @@ const row = {
     marginTop: 24
 }
 
+
 class Homepage extends React.Component {
 
     state = {
@@ -204,11 +205,11 @@ class Homepage extends React.Component {
                         />
                         <div className='HP_Intro coder' >{Copyright.coder.title}</div>
                         <div className='HP_descrip coder'>
-                            <div className="indentInCoder"><span className="blueCode codeDefineIndent">var NewTechnologies</span> = [Javascript, Node.js, React.js, Bootstrap,Firebase, MySQL, MongoDB, Express.js, Chai.js, Mocha.js]
+                            <div className="indentInCoder"><span className="greyCode codeDefineIndent">var NewTechnologies</span> = [Javascript, Node.js, React.js, Bootstrap,Firebase, MySQL, MongoDB, Express.js, Chai.js, Mocha.js]
                             </div>
                             <br />
                             <div>
-                                <div className="indentInCoder yellowCode"> <span className="blueCode codeDefineIndent">var Projects</span> <span className="pinkCode">=</span>
+                                <div className="indentInCoder yellowCode"> <span className="greyCode codeDefineIndent">var Projects</span> <span className="pinkCode">=</span>
                                         [<br />
                                     <br />
                                         &#123;name: "Flocker", type: ‘Matching app’, <a className="greenCode" rel="noopener noreferrer" target="_blank" href="https://github.com/wangx733/flocker">link</a>&#125;,</div>
@@ -226,7 +227,7 @@ class Homepage extends React.Component {
                                     {
                                         Copyright.coder.content.map((item, i) => {
                                             if (i % 2) {
-                                                return <span className="blueCode" key={i}> {item} </span>
+                                                return <span className="greyCode" key={i}> {item} </span>
 
                                             }
                                             else {
