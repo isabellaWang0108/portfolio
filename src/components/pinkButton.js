@@ -41,7 +41,8 @@ class PinkButton extends React.Component {
                         style={button}
                         href={this.props.link}
                         onMouseEnter={this.mouseEnter}
-                        onMouseOut={this.mouseOut}>
+                        onMouseOut={this.mouseOut}
+                        onClick={this.props.onClick}>
                         {this.props.label}
                     </button>
                 </NavLink> :
@@ -51,7 +52,9 @@ class PinkButton extends React.Component {
                     href={this.props.link}
                     onMouseEnter={this.mouseEnter}
                     onMouseOut={this.mouseOut}
-                    onClick={() => this.onClick(this.props.link)}>
+                    onClick={() =>{ 
+                        this.props.onClick();
+                        this.onClick(this.props.link)}}>
                     {this.props.label}
                 </button>
 

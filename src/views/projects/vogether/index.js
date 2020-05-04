@@ -27,6 +27,7 @@ import de4 from "../../../assets/images/vogether/prototype.png"
 import de5 from "../../../assets/images/vogether/user.png"
 
 import $ from 'jquery';
+import ReactGA from 'react-ga';
 
 const container = {
     top: 60,
@@ -38,10 +39,20 @@ const container = {
 
 class Vogether extends React.Component {
 
+    componentDidMount() {
+        ReactGA.initialize('UA-148443721-2', { testMode: true });
+    }
+
     onClick = (e) => {
         e.preventDefault();
         const selectPosition = $(".p" + e.target.className).position().top;
         $('#vogether').animate({ scrollTop: selectPosition }, 700);
+
+        // google analytics
+        ReactGA.event({
+            category: 'inside thesis session',
+            action: 'click on' + e.target.className
+        })
 
     }
 
@@ -81,7 +92,14 @@ class Vogether extends React.Component {
     render() {
         return (
             <div id="vogether" style={container} onScroll={this.handleScroll}>
-                <NavigationBar />
+                <NavigationBar
+                    onClick={() => {
+                        ReactGA.event({
+                            category: 'back to homepage',
+                            action: "back to home from vogether"
+                        })
+                    }}
+                />
                 <Navi />
 
                 {/* navigation bar ==============================================================================================  */}

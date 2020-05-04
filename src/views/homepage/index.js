@@ -21,6 +21,7 @@ import ArrowDown from "../../components/arrow"
 
 import Github from "../../assets/images/contact/github.png"
 import Linkedin from "../../assets/images/contact/linkedin.png"
+import ReactGA from 'react-ga';
 
 const windowHeight = {
     height: window.innerHeight,
@@ -41,6 +42,10 @@ class Homepage extends React.Component {
         timeLineHeight: $(document).height()
     }
 
+    componentDidMount() {
+        ReactGA.initialize('UA-148443721-2', { testMode: true });
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
     handleScroll = e => {
         e.preventDefault();
         $('#landingPart').css({
@@ -86,10 +91,23 @@ class Homepage extends React.Component {
                                 {Copyright.landingPage.title} </div>
                             <div className='HP_descrip'>
                                 Recently, I worked as front-end engineer and lead designer at a startup
-                            &nbsp;<a className="Alllinks" href="https://www.getawarehealth.com">AwareHealth</a>&nbsp;
+                            &nbsp;<a onClick={() => ReactGA.event({
+                                category: 'direct to link',
+                                action: 'AwareHealth'
+                            })}
+                                    className="Alllinks"
+                                    href="https://www.getawarehealth.com">AwareHealth</a>&nbsp;
                             while I went to school at Parsons finishing up my
-                            &nbsp;<a className="Alllinks" href="https://thesiscampy.webflow.io">thesis</a> &nbsp;and Cornell Tech solving
-                            &nbsp;<Link className="Alllinks" to="smoothHire">product challenge</Link> &nbsp;from Department of Defense.
+                            &nbsp;<a onClick={() => ReactGA.event({
+                                        category: 'direct to link',
+                                        action: 'Thesis from intro'
+                                    })}
+                                    className="Alllinks" href="https://thesiscampy.webflow.io">thesis</a> &nbsp;and Cornell Tech solving
+                            &nbsp;<Link onClick={() => ReactGA.event({
+                                        category: 'direct to link',
+                                        action: 'product studio from intro'
+                                    })}
+                                    className="Alllinks" to="smoothHire">product challenge</Link> &nbsp;from Department of Defense.
                             </div>
                         </div>
                         <div className="HP_downArr">
@@ -110,9 +128,17 @@ class Homepage extends React.Component {
                             <div className='HP_descrip'>{Copyright.thesis.content}
                                 <br />
                                 <PinkButton
+                                    onClick={() => {
+                                        console.log('thesis from homeBlock')
+                                        ReactGA.event({
+                                            category: 'direct to link',
+                                            action: 'thesis from homeBlock'
+                                        })
+                                    }}
                                     innerLink={false}
                                     label="See product"
                                     link={Copyright.thesis.link}
+
                                 />
                             </div>
                         </div>
@@ -137,6 +163,13 @@ class Homepage extends React.Component {
                                 {Copyright.dodCornell.content}
                                 <br />
                                 <PinkButton
+                                    onClick={() => {
+                                        console.log('product studio from homeBlock')
+                                        ReactGA.event({
+                                            category: 'direct to link',
+                                            action: 'product studio from homeBlock'
+                                        })
+                                    }}
                                     innerLink={true}
                                     label="See process"
                                     link={Copyright.dodCornell.link}
@@ -159,6 +192,13 @@ class Homepage extends React.Component {
                                 {Copyright.vogether.content}
                             </div>
                             <PinkButton
+                                onClick={() => {
+                                    console.log('Vogetherfrom homeBlock')
+                                    ReactGA.event({
+                                        category: 'direct to link',
+                                        action: 'Vogetherfrom from homeBlock'
+                                    })
+                                }}
                                 innerLink={true}
                                 label="View project"
                                 link={Copyright.vogether.link}
@@ -183,6 +223,13 @@ class Homepage extends React.Component {
                                 {Copyright.venture.content}
                             </div>
                             <PinkButton
+                                onClick={() => {
+                                    console.log('venture from homeBlock')
+                                    ReactGA.event({
+                                        category: 'direct to link',
+                                        action: 'venture from homeBlock'
+                                    })
+                                }}
                                 innerLink={false}
                                 label="Read insights"
                                 link={Copyright.venture.link}
@@ -212,11 +259,43 @@ class Homepage extends React.Component {
                                 <div className="indentInCoder yellowCode"> <span className="greyCode codeDefineIndent">var Projects</span> <span className="pinkCode">=</span>
                                         [<br />
                                     <br />
-                                        &#123;name: "Flocker", type: ‘Matching app’, <a className="greenCode" rel="noopener noreferrer" target="_blank" href="https://github.com/wangx733/flocker">link</a>&#125;,</div>
+                                        &#123;name: "Flocker", type: ‘Matching app’,
+                                        <a className="greenCode" rel="noopener noreferrer"
+                                        target="_blank"
+                                        href="https://github.com/wangx733/flocker"
+                                        onClick={() => {
+                                            console.log('flocker from homeBlock')
+                                            ReactGA.event({
+                                                category: 'direct to link',
+                                                action: 'flocker from homeBlock'
+                                            })
+                                        }}>link</a>&#125;,</div>
                                 <br />
-                                <div className="indentInCoder yellowCode"> &#123;name: "DearTime", type: "UX engineering",<a className="greenCode" rel="noopener noreferrer" target="_blank" href="https://github.com/wangx733/dearTime">link</a>&#125;,</div>
+                                <div className="indentInCoder yellowCode"> &#123;name: "DearTime", type: "UX engineering",
+                                <a className="greenCode" rel="noopener noreferrer"
+                                        target="_blank"
+                                        onClick={() => {
+                                            console.log('dearTime from homeBlock')
+                                            ReactGA.event({
+                                                category: 'direct to link',
+                                                action: 'dearTime from homeBlock'
+                                            })
+                                        }}
+                                        href="https://github.com/wangx733/dearTime"
+                                    >link</a>&#125;,</div>
                                 <br />
-                                <div className="indentInCoder yellowCode"> &#123;name: "Bamazon", type: "Cli app", <a className="greenCode" rel="noopener noreferrer" target="_blank" href="https://github.com/wangx733/Bamazon_Cli_App">link</a> &#125;</div>
+                                <div className="indentInCoder yellowCode"> &#123;name: "Bamazon", type: "Cli app",
+                                 <a className="greenCode" rel="noopener noreferrer"
+                                        target="_blank"
+                                        onClick={() => {
+                                            console.log('bamazon from homeBlock')
+                                            ReactGA.event({
+                                                category: 'direct to link',
+                                                action: 'bamazon from homeBlock'
+                                            })
+                                        }}
+                                        href="https://github.com/wangx733/Bamazon_Cli_App"
+                                    >link</a> &#125;</div>
                                 <br />
                                 <div className="indentInCoder yellowCode">]</div>
                                 <br />

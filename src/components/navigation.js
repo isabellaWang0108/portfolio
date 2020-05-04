@@ -31,7 +31,7 @@ class NavigationBar extends Component {
     }
     render() {
         return (
-            <div style={navigation}>
+            <div onClick={this.props.onClick} style={navigation}>
                 <div style={logo} onClick={this.click} className="logo bold pink">Isabella Wang</div>
                 {/* <a style={this.props.currentSelect ? yellowColor : null} className="bold navigationMargin" href={this.props.href}>contact</a> */}
               </div>

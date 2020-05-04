@@ -21,6 +21,7 @@ import de3 from "../../../assets/images/smoothHire/prototype.png"
 import de4 from "../../../assets/videos/smoothHire.mov"
 
 import $ from 'jquery';
+import ReactGA from 'react-ga';
 
 const container={
     top:60,
@@ -31,11 +32,20 @@ const container={
 }
 class Recruitment extends React.Component {
 
+    componentDidMount() {
+        ReactGA.initialize('UA-148443721-2', { testMode: true });
+    }
 
     onClick = (e) => {
         e.preventDefault();
         const selectPosition = $(".p" + e.target.className).position().top;
         $('#smoothHire').animate({ scrollTop: selectPosition }, 700);
+
+            // google analytics
+            ReactGA.event({
+                category: 'inside thesis session',
+                action: 'click on' + e.target.className
+            })
 
     }
 
@@ -75,7 +85,14 @@ class Recruitment extends React.Component {
     render() {
         return (
             <div id="smoothHire" style={container} onScroll={this.handleScroll}>
-                   <NavigationBar />
+                   <NavigationBar 
+                     onClick={() => {
+                        ReactGA.event({
+                            category: 'back to homepage',
+                            action: "back to home from smoothHire"
+                        })
+                    }}
+                    />
                 <Navi />
 
                 {/* navigation bar ==============================================================================================  */}
@@ -137,13 +154,14 @@ class Recruitment extends React.Component {
                     </Paragraph>
 
                     <Paragraph banner={pro4} title={Copyright.smoothHire.title[3]} val="pp3" class="pp3">
+                    <Bullet a="Renting industry experts insights"
+                            b="Tinder for Jobs"
+                            c="Transparent and time restricted recruitment process" />
+                       
                         <p> Base on the research take away, we started to generate ideas that solve the pain point.
                             <br /><br />We all generated 30 ideas base on the research result and gathered together to select best 3 from voting, making pitches and analyzing.
                             Our Top 3 ideas were:
-                            <Bullet a="Renting industry experts insights" />
-                            <Bullet a="Tinder for Jobs" />
-                            <Bullet a="Transparent and time restricted recruitment process" />
-                        </p>
+                         </p>
                     </Paragraph>
 
                     <Paragraph banner={pro5} title={Copyright.smoothHire.title[4]} val="pp4" class="pp4">

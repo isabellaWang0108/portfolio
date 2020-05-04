@@ -21,6 +21,8 @@ import Sketch3 from "../../../assets/images/Thesis/sketch3.jpg"
 import Campy from "../../../assets/images/home/logoCampy.gif"
 
 import $ from 'jquery';
+import ReactGA from 'react-ga';
+
 
 const container = {
     top: '3em',
@@ -32,11 +34,19 @@ const container = {
 
 class Recruitment extends React.Component {
 
+    componentDidMount() {
+        ReactGA.initialize('UA-148443721-2', { testMode: true });
+    }
 
     onClick = (e) => {
         e.preventDefault();
         const selectPosition = $(".p" + e.target.className).position().top;
         $('#ThesisCampy').animate({ scrollTop: selectPosition }, 700);
+        // google analytics
+        ReactGA.event({
+            category: 'inside thesis session',
+            action: 'click on' + e.target.className
+        })
 
     }
 
@@ -76,7 +86,14 @@ class Recruitment extends React.Component {
     render() {
         return (
             <div id="ThesisCampy" style={container} onScroll={this.handleScroll}>
-                <NavigationBar />
+                <NavigationBar
+                    onClick={() => {
+                        ReactGA.event({
+                            category: 'back to homepage',
+                            action: "back to home from thesis"
+                        })
+                    }}
+                />
                 <Navi />
 
                 {/* navigation bar ==============================================================================================  */}
