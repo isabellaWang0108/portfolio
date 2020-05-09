@@ -24,7 +24,7 @@ import Linkedin from "../../assets/images/contact/linkedin.png"
 import ReactGA from 'react-ga';
 
 const windowHeight = {
-    height: window.innerHeight,
+    height: window.innerWidth < 990 ? window.innerHeight * 1.1 : window.innerHeight,
     minHeight: 600,
     position: 'relative',
 }
@@ -49,8 +49,7 @@ class Homepage extends React.Component {
     handleScroll = e => {
         e.preventDefault();
         $('#landingPart').css({
-            'display': 'flex',
-            'marginTop': (10 - (this.state.timeLineHeight - $('#Thesis').position().top) * 0.01) + "vh"
+            'display': 'flex'
         })
         $("#contactPart").css('display', 'none');
 
@@ -80,7 +79,7 @@ class Homepage extends React.Component {
         return (
 
             <div id="parallaxScroll" onScroll={this.handleScroll}>
-                <NavigationBar href="#contactPart" />
+                <NavigationBar href="#contactPart" contact/>
                 <TimeLine height={this.state.timeLineHeight} />
                 <div id="HP_container" className='HP_container' >
 
@@ -109,11 +108,43 @@ class Homepage extends React.Component {
                                     })}
                                     className="Alllinks" to="smoothHire">product challenge</Link> &nbsp;from Department of Defense.
                             </div>
+
+                            <div className="HP_downArr">
+                                <div> &nbsp;&nbsp; Career key projects </div>
+                                <ArrowDown />
+                            </div>
                         </div>
-                        <div className="HP_downArr">
-                            <div> &nbsp;&nbsp; Career key projects </div>
-                            <ArrowDown />
+                    </div>
+
+                    {/* product studio */}
+                    <div id="DODCornell" className="black sessionContainer DODCornell" style={windowHeight}>
+                        <div className="contentblock">
+                            <img src={DODCornell} className="DODCornellImg" alt="DODCornell"></img>
                         </div>
+                        <div className="contentblock">
+                            <TimeStamp
+                                time={Copyright.dodCornell.time}
+                                color="black"
+                            />
+                            <div className='HP_Intro'>{Copyright.dodCornell.title}</div>
+                            <div className='HP_descrip'>
+                                {Copyright.dodCornell.content}
+                                <br />
+                                <PinkButton
+                                    onClick={() => {
+                                        console.log('product studio from homeBlock')
+                                        ReactGA.event({
+                                            category: 'direct to link',
+                                            action: 'product studio from homeBlock'
+                                        })
+                                    }}
+                                    innerLink={true}
+                                    label="See process"
+                                    link={Copyright.dodCornell.link}
+                                />
+                            </div>
+                        </div>
+
                     </div>
 
                     {/* Thesis Campy */}
@@ -146,37 +177,6 @@ class Homepage extends React.Component {
                             <img src={Campy} alt="campy" className="campy img" />
                         </div>
                         <img src={CampyBG} style={{ position: 'absolute', top: 0, left: -60 }} className={CampyBG} alt="campyBG"></img>
-                    </div>
-
-                    {/* product studio */}
-                    <div id="DODCornell" className="black sessionContainer DODCornell" style={windowHeight}>
-                        <div className="contentblock">
-                            <img src={DODCornell} className="DODCornellImg" alt="DODCornell"></img>
-                        </div>
-                        <div className="contentblock">
-                            <TimeStamp
-                                time={Copyright.dodCornell.time}
-                                color="black"
-                            />
-                            <div className='HP_Intro'>{Copyright.dodCornell.title}</div>
-                            <div className='HP_descrip'>
-                                {Copyright.dodCornell.content}
-                                <br />
-                                <PinkButton
-                                    onClick={() => {
-                                        console.log('product studio from homeBlock')
-                                        ReactGA.event({
-                                            category: 'direct to link',
-                                            action: 'product studio from homeBlock'
-                                        })
-                                    }}
-                                    innerLink={true}
-                                    label="See process"
-                                    link={Copyright.dodCornell.link}
-                                />
-                            </div>
-                        </div>
-
                     </div>
 
 

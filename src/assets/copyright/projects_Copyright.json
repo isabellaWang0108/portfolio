@@ -1,26 +1,26 @@
 {
     "smoothHire": {
-        "challenge": "How to hire top tier technical talents?",
-        "descrip": "This is a job board designed to get company more millennial technical talents",
+        "challenge": "This is a product challenge given by US Department of Defense on how to hire millennial technical talents within four months",
+        "team":"A multi-multidisciplinary team with 4 people from business, Computer science, Connected media and design background",
         "name": "smoothHire",
         "myrole": [
             "Sourced relevant players and conducted interviews",
             "Designed experimentations to validate risky assumptions",
             "Decided key user flows then made prototype conveys the value"
         ],
-        "for": "UX experimentation",
+        "for": "UX design",
         "title": [
-            "Problem Statement",
             "User Research",
-            "Industrial Research",
+            "Problem Statement",
+            "Competitive Research",
             "Ideation",
-            "Risk analysis",
+            "Risk Analysis",
             "Experimentation",
             "Sketch",
             "Prototype",
-            "Product demo"
+            "Video Demo"
         ],
-        "content": "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found",
+        "content": " Our contact point from the Department of Defense told us that there are difficulties for them to attract young technical talents and wanted us to investigate the problem and propose a solution. Thus, we started with user research. The solutions can only be found by figuring out the pain points in users. throughout our process from finding problems to designing solutions, we interviewed around 20 people. Those people include fresh graduates from the top universities, boot camp students, career switchers, recruiters, technical experts, and C-suites from Tech startups.\n Here is a summary of their pain points:",
         "otherProjects": [
             {
                 "name": "Smooth Hire",

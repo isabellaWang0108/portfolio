@@ -7,28 +7,34 @@ import Prelude from "../../../components/prelude"
 import Bullet from "../../../components/bullet"
 import Copyright from "../../../assets/copyright/projects_Copyright.json"
 import NavigationBar from "../../../components/navigation"
+import Goback from "../../../components/back"
 
 import SmoothHireImg from "../../../assets/images/smoothHire/smoothHireImg.jpg"
-import pro1 from "../../../assets/images/smoothHire/logo.png"
+import pro1 from "../../../assets/images/smoothHire/richPicture.jpg"
 import pro2 from "../../../assets/images/smoothHire/userResearch.jpg"
-import pro3 from "../../../assets/images/smoothHire/richPicture.jpg"
+import pro3 from "../../../assets/images/smoothHire/competitors.jpg"
 import pro4 from "../../../assets/images/smoothHire/ideas.png"
 import pro5 from "../../../assets/images/smoothHire/value.png"
 
-import de1 from "../../../assets/images/smoothHire/experiment.png"
+import de1 from "../../../assets/images/smoothHire/experiment1.png"
 import de2 from "../../../assets/images/smoothHire/sketch.png"
-import de3 from "../../../assets/images/smoothHire/prototype.png"
+import de3 from "../../../assets/images/smoothHire/experiment2.png"
 import de4 from "../../../assets/videos/smoothHire.mov"
+import de5 from "../../../assets/images/smoothHire/experiment3.png"
+import de6 from "../../../assets/images/smoothHire/prototype.png"
+import de7 from "../../../assets/images/smoothHire/companyCulture.svg"
+import de8 from "../../../assets/images/smoothHire/jobApplication.svg"
+import Experiment3 from "../../../assets/images/smoothHire/testing3.png"
 
 import $ from 'jquery';
 import ReactGA from 'react-ga';
 
-const container={
-    top:60,
-    position:'fixed',
-    width:'100%',
-    overflow:'scroll',
-    height:"95vh"
+const container = {
+    top: 60,
+    position: 'fixed',
+    width: '100%',
+    overflow: 'scroll',
+    height: "95vh"
 }
 class Recruitment extends React.Component {
 
@@ -41,11 +47,11 @@ class Recruitment extends React.Component {
         const selectPosition = $(".p" + e.target.className).position().top;
         $('#smoothHire').animate({ scrollTop: selectPosition }, 700);
 
-            // google analytics
-            ReactGA.event({
-                category: 'inside thesis session',
-                action: 'click on' + e.target.className
-            })
+        // google analytics
+        ReactGA.event({
+            category: 'inside thesis session',
+            action: 'click on' + e.target.className
+        })
 
     }
 
@@ -85,19 +91,23 @@ class Recruitment extends React.Component {
     render() {
         return (
             <div id="smoothHire" style={container} onScroll={this.handleScroll}>
-                   <NavigationBar 
-                     onClick={() => {
+                <NavigationBar
+                    contact
+                    onClick={() => {
                         ReactGA.event({
                             category: 'back to homepage',
                             action: "back to home from smoothHire"
                         })
                     }}
-                    />
+                />
                 <Navi />
 
                 {/* navigation bar ==============================================================================================  */}
                 <div id="navi" className="animated slideInDown">
-                    <div id="content" style={{ background: '#F1F1F1'}}>
+                   
+                    <Goback />
+                    <div id="content" style={{ background: '#F1F1F1' }}>
+
                         <ul>Process
                         {Copyright.smoothHire.title.map((item, index) => {
                             return (
@@ -125,75 +135,119 @@ class Recruitment extends React.Component {
                 <div id="info">
                     <Prelude
                         imgSrc={SmoothHireImg}
-                        descrip={Copyright.smoothHire.descrip}
+                        team={Copyright.smoothHire.team}
                         name={Copyright.smoothHire.name}
                         challenge={Copyright.smoothHire.challenge}
                         myrole={Copyright.smoothHire.myrole}
                         for={Copyright.smoothHire.for} />
 
-                    <Paragraph banner={pro1} title={Copyright.smoothHire.title[0]} val="pp0" class="pp0">
+                    <Paragraph banner={pro2} title={Copyright.smoothHire.title[0]} val="pp0" class="pp0">
                         <p>
-                            Hiring skilled and qualified professionals is imperative to the success of any company. However, <span className='bold'>the recruitment is broken on both company and candidate sides. </span>
-                            <br /><br /><span className='bold'>For recruiters: </span> according to First Round Capital's survey, "Hireing good people" is what keeps 66% Startup CEOs and founders up at night.
-                            <br /><br /><span className='bold'>For candidates: </span> they often suffer from the "Resume black hole", misalignments and drawn-out process.
+                            {Copyright.smoothHire.content}
                         </p>
 
                     </Paragraph>
 
-                    <Paragraph banner={pro2} title={Copyright.smoothHire.title[1]} val="pp1" class="pp1">
-                        <p> 
-                        {Copyright.smoothHire.content}
+                    <Paragraph banner={pro1} title={Copyright.smoothHire.title[1]} val="pp1" class="pp1">
+                        <p>
+                            After analyzing the pain points we collected from the people, we refined the problem as:
+                            <br /><br /><span className='bold'>For recruiters: </span> Every day, they are flooded by massive amounts of applications with different formats. It is hard for them to pick out candidates with the right qualification and skills.
+                            <br /><br /><span className='bold'>For candidates: </span> They often found insufficient information to illustrate how their life will look like after getting into the company. If they think they will figure out during the interview, often after the application, they suffer from the "Resume black hole", which means the endless waiting after the submission with no idea where the companies are in the review process and when they can expect a callback. All those problems draw the young talents away to other opportunities that give them a response.
+                        <br /><br /> To better understand the problem, we draw a rick picture to unveil the entire recruitment process to figure out all the stakeholders and technology involved, because the solution can go beyond just recruiters and candidates but be anywhere in the process.
                         </p>
 
                     </Paragraph>
+
+
 
 
                     <Paragraph banner={pro3} title={Copyright.smoothHire.title[2]} val="pp2" class="pp2">
-                        <p>A general research of the recruitment process and landscape of recruitment softwares.</p>
+                        <p>This is 2019, there are probably people already realize the problem and trying to solve that. With the major pain points in mind, we looked into other people's solutions to the pain points.
+                       <br />
+                        here is what we learned from our ancestors:
+                        </p>
+                        <Bullet a="Automation is dangerous. Candidates want a touch of human during the recruitment, but automation struggles on giving personal messages."
+                            b="Recruitment is a two-side market, but we have to pick our side either help recruiters to do their jobs easier or provide better experience for candidates. "
+                        />
 
                     </Paragraph>
 
                     <Paragraph banner={pro4} title={Copyright.smoothHire.title[3]} val="pp3" class="pp3">
-                    <Bullet a="Renting industry experts insights"
-                            b="Tinder for Jobs"
-                            c="Transparent and time restricted recruitment process" />
-                       
-                        <p> Base on the research take away, we started to generate ideas that solve the pain point.
-                            <br /><br />We all generated 30 ideas base on the research result and gathered together to select best 3 from voting, making pitches and analyzing.
-                            Our Top 3 ideas were:
+                        <p>  Base on the research take away, we started to generate ideas that solve the pain point 30 per person.
+                        A good idea should not only logical but also sounds good.
+                        We gathered together to vote the best idea from the pitches.
+                        Initially we had three ideas that are tie to each other, but after talking to our contact points, some of them are just not feasible at scale. If you want to know the process in detail, contact me!
+                        Here is what we propose:
                          </p>
+                        <p><span className="bold pink">
+                            A transparent and time restricted recruitment process.
+                    </span>
+                            <br />
+                        A job board should reveal a detailed recruitment process and estimated time for each stage to take. Candidates are guaranteed to get a callback once the clock hits the promised time. </p>
+                        <br />
                     </Paragraph>
 
                     <Paragraph banner={pro5} title={Copyright.smoothHire.title[4]} val="pp4" class="pp4">
-                        <p> </p>
+                        <p>
+                            A good idea never immediately turns into a good product. We have to turn the idea into features. And features always come with its value and risk, so it is important to debug the fatal risks before we jump into conclusion and hand proposal over to engineers. Engineering is expensive and sometimes irreversible.
+                        <br />  <br />
+                        For us, the RISKEST hypothesis is that recruiters are able to support the speed and transparency by putting out the recruitment process, team structure, company culture and commit to get back to candidates in a limited time.
+                        </p>
                     </Paragraph>
 
-                    <Paragraph banner={de1} title={Copyright.smoothHire.title[5]} val="pp5" class="pp5">
-                        <p>We conducted 3 experiments to validate the value proposition.</p>
+                    <Paragraph imgShadow={true} banner={de1} title={Copyright.smoothHire.title[5]} val="pp5" class="pp5">
+                        <p>We designed our first experiment to test whether company can commit to the time constrain:
+                        We pitched 6 startups and asked them to run their recruitment process. 1/2  of the startups were super interested and they shared the breakdown of their recruitment process immediately. However, when it came to execution - they were afraid to commit to the 3-week time limit!
+                        </p>
+                    </Paragraph>
+                    <Paragraph imgShadow={true} banner={de3}>
+                        <p>The hypothesis on the recruiter side seems not working. How about candidates?
+                            <br />We sent out emails with a job with the 3-week guaranteed callback to candidates. However, we found that candidates may not be able to commit either. </p>
+                    </Paragraph>
+
+
+                    <Paragraph imgShadow={true} banner={Experiment3}>
+                        <p>
+                            With a total failure on validating speed commitment from both recruiter and candidate sides, we have to think about the workaround. After several discussions, we decided to take transparency apart from speed and test on whether transparency matters. If neither speed nor transparency can be validated, we will have to pivot to other ideas.
+                        <br /><br />
+                        We sent out emails with a job description with elements of transparency. Each link is tracked by analytics to a 404 page, so we will know who clicked on what. With concerns on the mere-exposure effect, we send out a total of 120 emails in total with shaffled order of links. If candidates care about transparency, they will click on the link to see further information. If they do not care, they will directly apply to the job. Once we can prove more than 54% of people care, the value is validated.
+                        </p>
+                    </Paragraph>
+
+                    <Paragraph banner={de5}>
+                        <p>
+                            Luckily value of transparency is validated! Below is a chart of our statistics.
+                        </p>
                     </Paragraph>
 
                     <Paragraph banner={de2} title={Copyright.smoothHire.title[6]} val="pp6" class="pp6">
-                        <p></p>
+                        <p>
+                            Since transparency is validated, we started to prototype the solution.
+                        </p>
                     </Paragraph>
 
                     <br /> <br /> <br />
 
+                    <Paragraph imgShadow={true} banner={de7} title={Copyright.smoothHire.title[7]} val="pp7" class="pp7">
+                        <p>Unlike most of the job board, our job board includes different elements of transparancy in addition to the basic job desciption, like recruitment process, day-to-day-life samples.</p>
+                    </Paragraph>
 
+                    <Paragraph imgShadow={true} banner={de8}>
+                        <p>In addition, we have sessions to allow company showcase their culture.</p>
+                    </Paragraph>
 
-
-                    <Paragraph banner={de3} title={Copyright.smoothHire.title[7]} val="pp7" class="pp7">
-                    <p> We used github to work together on coding.
-                        
-                        </p>
+                    <Paragraph banner={de6}>
+                        <p>If you're interested in having a general view of all the pages and see my design of information architecture.</p>
                     </Paragraph>
 
                     <Paragraph video={de4} title={Copyright.smoothHire.title[8]} val="pp8" class="pp8">
-                        <p> 
+                        <p>
+                            Watch the video demo of our prototype. If you want to know further details about anything, contact me!
                         </p>
                     </Paragraph>
 
                     <Paragraph noImg={true}>
-                    <Link to="/"> View other projects >></Link>
+                        <Link to="/"> View other projects >></Link>
                     </Paragraph>
                     <br /><br /><br /><br />
                 </div>

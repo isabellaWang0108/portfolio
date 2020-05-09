@@ -48,7 +48,7 @@ h3,ul{
 }
 p,li{
   font-size:16px;
-  line-height: 1.7em;
+  line-height: 2em;
 }
 li{
   font-size:15px;
@@ -136,7 +136,7 @@ a:hover{
 }
 #content{
   position: absolute;
-  top:5%;
+  top:10%;
   left:0;
   width:99.9%;
 }
@@ -210,6 +210,8 @@ a:hover{
 .navigationMargin{
 margin-right: 24px;
 font-size: 18px;
+margin-top:6px;
+cursor: pointer;
 }
 
 .buttonTurnPink{
@@ -237,12 +239,12 @@ font-size: 18px;
 
   .HP_downArr{
     font-family:SuisseIntl-Regular;
-     bottom:12vh;
+     margin-top:2em;
      color:#FF1493;
      display:flex;
      flex-direction: row-reverse;
      align-items: center;
-     position: absolute;
+     position: relative;
   }
 /* Homepage CSS */
 

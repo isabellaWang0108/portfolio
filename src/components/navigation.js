@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 const navigation = {
     position: "fixed",
@@ -26,14 +27,19 @@ const logo = {
 //     color: '#f2911f'
 // }
 class NavigationBar extends Component {
-    click = () => {
+    Logoclick = () => {
         window.location.href = "/";
     }
     render() {
         return (
             <div onClick={this.props.onClick} style={navigation}>
-                <div style={logo} onClick={this.click} className="logo bold pink">Isabella Wang</div>
-                {/* <a style={this.props.currentSelect ? yellowColor : null} className="bold navigationMargin" href={this.props.href}>contact</a> */}
+                <div style={logo} onClick={this.Logoclick} className="logo bold pink">Isabella Wang</div>
+                {this.props.contact?
+                <Link to="/contact">
+                <h1 className="bold pink navigationMargin">contact</h1>
+                </Link>
+                :null}
+                {this.props.projects?<a className="bold navigationMargin" onClick={this.Logoclick} href='/'>projects</a>:null}
               </div>
         )
     }
