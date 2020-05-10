@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dcc2a9d8c59cb95c2752c1e7f48046e4",
+    "revision": "6d7224d85e16b04b72adab06c61e1a05",
     "url": "/index.html"
   },
   {
-    "revision": "ca6ea42078cc6b73424a",
-    "url": "/static/css/main.32b5e385.chunk.css"
+    "revision": "3561a55723bf8c5cf298",
+    "url": "/static/css/main.9f2426f4.chunk.css"
   },
   {
-    "revision": "76bbe957390c87bc590d",
-    "url": "/static/js/2.ec682116.chunk.js"
+    "revision": "824ad21ed5eea8b6a05d",
+    "url": "/static/js/2.08dc82ac.chunk.js"
   },
   {
-    "revision": "ca6ea42078cc6b73424a",
-    "url": "/static/js/main.dc73665c.chunk.js"
+    "revision": "eb8713a3c306913c4da32b486f103b93",
+    "url": "/static/js/2.08dc82ac.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "eb9d0ca455ecfd094f8e",
-    "url": "/static/js/runtime-main.c5c79751.js"
+    "revision": "3561a55723bf8c5cf298",
+    "url": "/static/js/main.85891c75.chunk.js"
+  },
+  {
+    "revision": "2060b9a7e54a59ab7b07",
+    "url": "/static/js/runtime-main.f3a02c50.js"
   },
   {
     "revision": "752ccf9e9a09695057968907a5011f3b",
@@ -52,6 +56,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/DODCornell.5c2829ea.svg"
   },
   {
+    "revision": "decd5eb1523a2de93aae46edaaab3b0f",
+    "url": "/static/media/IsabellaCursor.decd5eb1.png"
+  },
+  {
     "revision": "3f16c813c5c1b5ebe4fb8f1e53eb57c6",
     "url": "/static/media/SuisseIntl-Regular.3f16c813.otf"
   },
@@ -66,6 +74,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "51b53373ad97cc9c6c59f7dfcd3c4525",
     "url": "/static/media/arrow.51b53373.svg"
+  },
+  {
+    "revision": "31c5d7b669d308f068287992ec11f7ca",
+    "url": "/static/media/arrowCursor.31c5d7b6.png"
   },
   {
     "revision": "0a69fd60c080e95b47823cf946ad0703",
@@ -86,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "791dab463c0b5316f0d7d72d989376c6",
     "url": "/static/media/competitors.791dab46.jpg"
+  },
+  {
+    "revision": "f0fee1f0968d954462f43eab987fb070",
+    "url": "/static/media/contactCursor.f0fee1f0.png"
   },
   {
     "revision": "026aa506e66a06c7761621ac1042dc2b",
@@ -172,6 +188,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/smoothHireImg.37162787.jpg"
   },
   {
+    "revision": "474456c63babdd3f5895892507f6daf3",
+    "url": "/static/media/smoothHirecursor.474456c6.png"
+  },
+  {
     "revision": "304447dd15668f584b2fb69846445666",
     "url": "/static/media/storyboard.304447dd.jpg"
   },
@@ -182,6 +202,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6002b3302112c6a47306397f33ee60cc",
     "url": "/static/media/testing3.6002b330.png"
+  },
+  {
+    "revision": "813bcb6ac7e1301e41ccdd28658ece3d",
+    "url": "/static/media/thesisCursor.813bcb6a.png"
   },
   {
     "revision": "7c9d5cab295d344fc7d5682b03bb30ae",
@@ -202,6 +226,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "360e4b801e5e304992b92d1ae7280949",
     "url": "/static/media/ventureBG.360e4b80.svg"
+  },
+  {
+    "revision": "4a7b6daf1f830eb088722910bab943e6",
+    "url": "/static/media/ventureCursor.4a7b6daf.png"
+  },
+  {
+    "revision": "9db3df4889ac314fb48163c0f6fa562f",
+    "url": "/static/media/vogetherCursor.9db3df48.png"
   },
   {
     "revision": "22c84b0b7db0b1eb58aad888df7da6d5",

@@ -29,8 +29,8 @@ import SmoothHirecursor from '../../assets/images/home/smoothHirecursor.png'
 import ThesisCursor from '../../assets/images/home/thesisCursor.png'
 import ArrowCursor from "../../assets/images/home/arrowCursor.png"
 import VogetherCursor from "../../assets/images/home/vogetherCursor.png"
-import VentureCursor from "../../assets/images/home/ventureCursor.svg"
-import ContactCursor from "../../assets/images/home/contactCursor.svg"
+import VentureCursor from "../../assets/images/home/ventureCursor.png"
+import ContactCursor from "../../assets/images/home/contactCursor.png"
 
 
 const windowHeight = {
@@ -109,7 +109,7 @@ class Homepage extends React.Component {
             })
         }
         
-        if (e.pageY > $('#Contact').offset().top && e.pageY) {
+        if (e.pageY > $('#Contact').offset().top ) {
             this.setState({
                 cursorRotation:'rotate(0deg)',
                 cursorImg: ContactCursor
