@@ -30,11 +30,12 @@ import $ from 'jquery';
 import ReactGA from 'react-ga';
 
 const container = {
-    top: 60,
+    top: window.innerWidth > 450 ? 60 : 50,
     position: 'fixed',
     width: '100%',
     overflow: 'scroll',
-    height: "95vh"
+    height: "95vh",
+    left: 0
 }
 class Recruitment extends React.Component {
 
@@ -90,7 +91,7 @@ class Recruitment extends React.Component {
 
     render() {
         return (
-            <div id="smoothHire" style={container} onScroll={this.handleScroll}>
+            <div>
                 <NavigationBar
                     contact
                     onClick={() => {
@@ -102,22 +103,23 @@ class Recruitment extends React.Component {
                 />
                 <Navi />
 
-                {/* navigation bar ==============================================================================================  */}
-                <div id="navi" className="animated slideInDown">
+                <div id="smoothHire" style={container} onScroll={this.handleScroll}>
+                    {/* navigation bar ==============================================================================================  */}
+                    <div id="navi" className="animated slideInDown">
 
-                    <Goback />
-                    <div id="content" style={{ background: '#F1F1F1' }}>
+                        <Goback />
+                        <div id="content" style={{ background: '#F1F1F1' }}>
 
-                        <ul>Process
+                            <ul>Process
                         {Copyright.smoothHire.title.map((item, index) => {
-                            return (
-                                <li key={index} onClick={this.onClick} className={"p" + index}>{item}
-                                </li>
-                            )
-                        })}
-                        </ul>
+                                return (
+                                    <li key={index} onClick={this.onClick} className={"p" + index}>{item}
+                                    </li>
+                                )
+                            })}
+                            </ul>
 
-                        {/* <div id="recommend">
+                            {/* <div id="recommend">
                             <br />
                             <ul>More projects like this<br />
                                 
@@ -129,127 +131,128 @@ class Recruitment extends React.Component {
                             </ul>
                         </div> */}
 
+                        </div>
                     </div>
-                </div>
-                {/*contect itself ==============================================================================================                  */}
-                <div id="info">
-                    <Prelude
-                        imgSrc={SmoothHireImg}
-                        team={Copyright.smoothHire.team}
-                        name={Copyright.smoothHire.name}
-                        challenge={Copyright.smoothHire.challenge}
-                        myrole={Copyright.smoothHire.myrole}
-                        for={Copyright.smoothHire.for} />
+                    {/*contect itself ==============================================================================================                  */}
+                    <div id="info">
+                        <Prelude
+                            imgSrc={SmoothHireImg}
+                            team={Copyright.smoothHire.team}
+                            name={Copyright.smoothHire.name}
+                            challenge={Copyright.smoothHire.challenge}
+                            myrole={Copyright.smoothHire.myrole}
+                            for={Copyright.smoothHire.for} />
 
-                    <Paragraph banner={pro2} title={Copyright.smoothHire.title[0]} val="pp0" class="pp0">
-                        <p>
-                            {Copyright.smoothHire.content}
-                        </p>
+                        <Paragraph banner={pro2} title={Copyright.smoothHire.title[0]} val="pp0" class="pp0">
+                            <p>
+                                {Copyright.smoothHire.content}
+                            </p>
 
-                    </Paragraph>
+                        </Paragraph>
 
-                    <Paragraph banner={pro1} title={Copyright.smoothHire.title[1]} val="pp1" class="pp1">
-                        <p>
-                            After analyzing the pain points we collected from the people, we refined the problem as:
+                        <Paragraph banner={pro1} title={Copyright.smoothHire.title[1]} val="pp1" class="pp1">
+                            <p>
+                                After analyzing the pain points we collected from the people, we refined the problem as:
                             <br /><br /><span className='bold'>For recruiters: </span> Every day, they are flooded by massive amounts of applications with different formats. It is hard for them to pick out candidates with the right qualification and skills.
                             <br /><br /><span className='bold'>For candidates: </span> They often found insufficient information to illustrate how their life will look like after getting into the company. If they think they will figure out during the interview, often after the application, they suffer from the "Resume black hole", which means the endless waiting after the submission with no idea where the companies are in the review process and when they can expect a callback. All those problems draw the young talents away to other opportunities that give them a response.
                         <br /><br /> To better understand the problem, we draw a rick picture to unveil the entire recruitment process to figure out all the stakeholders and technology involved, because the solution can go beyond just recruiters and candidates but be anywhere in the process.
                         </p>
 
-                    </Paragraph>
+                        </Paragraph>
 
 
 
 
-                    <Paragraph banner={pro3} title={Copyright.smoothHire.title[2]} val="pp2" class="pp2">
-                        <p>This is 2019, there are probably people already realize the problem and trying to solve that. With the major pain points in mind, we looked into other people's solutions to the pain points.
+                        <Paragraph banner={pro3} title={Copyright.smoothHire.title[2]} val="pp2" class="pp2">
+                            <p>This is 2019, there are probably people already realize the problem and trying to solve that. With the major pain points in mind, we looked into other people's solutions to the pain points.
                        <br />
                         Here is what we learned from our ancestors:
                         </p>
-                        <Bullet a="Automation is dangerous. Candidates want a touch of human during the recruitment, but automation struggles on giving personal messages."
-                            b="Recruitment is a two-side market, but we have to pick our side either help recruiters to do their jobs easier or provide better experience for candidates. "
-                        />
+                            <Bullet a="Automation is dangerous. Candidates want a touch of human during the recruitment, but automation struggles on giving personal messages."
+                                b="Recruitment is a two-side market, but we have to pick our side either help recruiters to do their jobs easier or provide better experience for candidates. "
+                            />
 
-                    </Paragraph>
+                        </Paragraph>
 
-                    <Paragraph banner={pro4} title={Copyright.smoothHire.title[3]} val="pp3" class="pp3">
-                        <p>  Base on the research take away, we started to generate ideas that solve the pain point 30 per person.
-                        A good idea should not only logical but also sounds good.
-                        We gathered together to vote the best idea from the pitches.
-                        Initially we had three ideas that are tie to each other, but after talking to our contact points, some of them are just not feasible at scale. If you want to know the process in detail, contact me!
-                        Here is what we propose:
+                        <Paragraph banner={pro4} title={Copyright.smoothHire.title[3]} val="pp3" class="pp3">
+                            <p>  Base on the research take away, we started to generate ideas that solve the pain point 30 per person.
+                            A good idea should not only logical but also sounds good.
+                            We gathered together to vote the best idea from the pitches.
+                            Initially we had three ideas that are tie to each other, but after talking to our contact points, some of them are just not feasible at scale. If you want to know the process in detail, contact me!
+                            Here is what we propose:
                          </p>
-                        <p><span className="bold pink">
-                            A transparent and time restricted recruitment process.
+                            <p><span className="bold pink">
+                                A transparent and time restricted recruitment process.
                     </span>
-                            <br />
+                                <br />
                         A job board should reveal a detailed recruitment process and estimated time for each stage to take. Candidates are guaranteed to get a callback once the clock hits the promised time. </p>
-                        <br />
-                    </Paragraph>
+                            <br />
+                        </Paragraph>
 
-                    <Paragraph banner={pro5} title={Copyright.smoothHire.title[4]} val="pp4" class="pp4">
-                        <p>
-                            A good idea never immediately turns into a good product. We have to turn the idea into features. And features always come with its value and risk, so it is important to debug the fatal risks before we jump into conclusion and hand proposal over to engineers. Engineering is expensive and sometimes irreversible.
+                        <Paragraph banner={pro5} title={Copyright.smoothHire.title[4]} val="pp4" class="pp4">
+                            <p>
+                                A good idea never immediately turns into a good product. We have to turn the idea into features. And features always come with its value and risk, so it is important to debug the fatal risks before we jump into conclusion and hand proposal over to engineers. Engineering is expensive and sometimes irreversible.
                         <br />  <br />
                         For us, the RISKEST hypothesis is that recruiters are able to support the speed and transparency by putting out the recruitment process, team structure, company culture and commit to get back to candidates in a limited time.
                         </p>
-                    </Paragraph>
+                        </Paragraph>
 
-                    <Paragraph imgShadow={true} banner={de1} title={Copyright.smoothHire.title[5]} val="pp5" class="pp5">
-                        <p>We designed our first experiment to test whether company can commit to the time constrain:
-                        We pitched 6 startups and asked them to run their recruitment process. 1/2  of the startups were super interested and they shared the breakdown of their recruitment process immediately. However, when it came to execution - they were afraid to commit to the 3-week time limit!
+                        <Paragraph imgShadow={true} banner={de1} title={Copyright.smoothHire.title[5]} val="pp5" class="pp5">
+                            <p>We designed our first experiment to test whether company can commit to the time constrain:
+                            We pitched 6 startups and asked them to run their recruitment process. 1/2  of the startups were super interested and they shared the breakdown of their recruitment process immediately. However, when it came to execution - they were afraid to commit to the 3-week time limit!
                         </p>
-                    </Paragraph>
-                    <Paragraph imgShadow={true} banner={de3}>
-                        <p>The hypothesis on the recruiter side seems not working. How about candidates?
+                        </Paragraph>
+                        <Paragraph imgShadow={true} banner={de3}>
+                            <p>The hypothesis on the recruiter side seems not working. How about candidates?
                             <br />We sent out emails with a job with the 3-week guaranteed callback to candidates. However, we found that candidates may not be able to commit either. </p>
-                    </Paragraph>
+                        </Paragraph>
 
 
-                    <Paragraph imgShadow={true} banner={Experiment3}>
-                        <p>
-                            With a total failure on validating speed commitment from both recruiter and candidate sides, we have to think about the workaround. After several discussions, we decided to take transparency apart from speed and test on whether transparency matters. If neither speed nor transparency can be validated, we will have to pivot to other ideas.
+                        <Paragraph imgShadow={true} banner={Experiment3}>
+                            <p>
+                                With a total failure on validating speed commitment from both recruiter and candidate sides, we have to think about the workaround. After several discussions, we decided to take transparency apart from speed and test on whether transparency matters. If neither speed nor transparency can be validated, we will have to pivot to other ideas.
                         <br /><br />
                         We sent out emails with a job description with elements of transparency. Each link is tracked by analytics to a 404 page, so we will know who clicked on what. With concerns on the mere-exposure effect, we send out a total of 120 emails in total with shaffled order of links. If candidates care about transparency, they will click on the link to see further information. If they do not care, they will directly apply to the job. Once we can prove more than 54% of people care, the value is validated.
                         </p>
-                    </Paragraph>
+                        </Paragraph>
 
-                    <Paragraph banner={de5}>
-                        <p>
-                            Luckily value of transparency is validated! Below is a chart of our statistics.
+                        <Paragraph banner={de5}>
+                            <p>
+                                Luckily value of transparency is validated! Below is a chart of our statistics.
                         </p>
-                    </Paragraph>
+                        </Paragraph>
 
-                    <Paragraph banner={de2} title={Copyright.smoothHire.title[6]} val="pp6" class="pp6">
-                        <p>
-                            Since transparency is validated, we started to prototype the solution.
+                        <Paragraph banner={de2} title={Copyright.smoothHire.title[6]} val="pp6" class="pp6">
+                            <p>
+                                Since transparency is validated, we started to prototype the solution.
                         </p>
-                    </Paragraph>
+                        </Paragraph>
 
-                    <br /> <br /> <br />
+                        <br /> <br /> <br />
 
-                    <Paragraph imgShadow={true} banner={de7} title={Copyright.smoothHire.title[7]} val="pp7" class="pp7">
-                        <p>Unlike most of the job board, our job board includes different elements of transparancy in addition to the basic job desciption, like recruitment process, day-to-day-life samples.</p>
-                    </Paragraph>
+                        <Paragraph imgShadow={true} banner={de7} title={Copyright.smoothHire.title[7]} val="pp7" class="pp7">
+                            <p>Unlike most of the job board, our job board includes different elements of transparancy in addition to the basic job desciption, like recruitment process, day-to-day-life samples.</p>
+                        </Paragraph>
 
-                    <Paragraph imgShadow={true} banner={de8}>
-                        <p>In addition, we have sessions to allow company showcase their culture.</p>
-                    </Paragraph>
+                        <Paragraph imgShadow={true} banner={de8}>
+                            <p>In addition, we have sessions to allow company showcase their culture.</p>
+                        </Paragraph>
 
-                    <Paragraph banner={de6}>
-                        <p>If you're interested in having a general view of all the pages and see my design of information architecture.</p>
-                    </Paragraph>
+                        <Paragraph banner={de6}>
+                            <p>If you're interested in having a general view of all the pages and see my design of information architecture.</p>
+                        </Paragraph>
 
-                    <Paragraph video={de4} title={Copyright.smoothHire.title[8]} val="pp8" class="pp8">
-                        <p>
-                            Watch the video demo of our prototype. If you want to know further details about anything, contact me!
+                        <Paragraph video={de4} title={Copyright.smoothHire.title[8]} val="pp8" class="pp8">
+                            <p>
+                                Watch the video demo of our prototype. If you want to know further details about anything, contact me!
                         </p>
-                    </Paragraph>
+                        </Paragraph>
 
-                    <Paragraph noImg={true}>
-                        <Link to="/"> View other projects >></Link>
-                    </Paragraph>
-                    <br /><br /><br /><br />
+                        <Paragraph noImg={true}>
+                            <Link to="/"> View other projects >></Link>
+                        </Paragraph>
+                        <br /><br /><br /><br />
+                    </div>
                 </div>
             </div>
         );

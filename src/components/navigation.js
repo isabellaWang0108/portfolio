@@ -9,14 +9,14 @@ const navigation = {
     display: 'flex',
     flexDirection: 'row',
     zIndex: 999,
-    height: 60,
+    height: window.innerWidth > 450 ? 60 : 50,
     justifyContent: 'flex-end',
     paddingTop: 12
 }
 
 const logo = {
     cursor: 'pointer',
-    zIndex: 12,
+    zIndex: 60,
     fontSize: 24,
     position: 'fixed',
     left: 12,
@@ -33,14 +33,17 @@ class NavigationBar extends Component {
     render() {
         return (
             <div onClick={this.props.onClick} style={navigation}>
+                {/* logo */}
                 <div style={logo} onClick={this.Logoclick} className="logo bold pink">Isabella Wang</div>
-                {this.props.contact?
-                <Link to="/contact">
-                <h1 className="bold pink navigationMargin">contact</h1>
-                </Link>
-                :null}
-                {this.props.projects?<a className="bold navigationMargin" onClick={this.Logoclick} href='/'>projects</a>:null}
-              </div>
+                {/* contact button */}
+                {this.props.contact ?
+                    <Link to="/contact">
+                        <h1 className="bold pink navigationMargin">contact</h1>
+                    </Link>
+                    : null}
+                {/* project button */}
+                {this.props.projects ? <a className="bold navigationMargin" onClick={this.Logoclick} href='/'>projects</a> : null}
+            </div>
         )
     }
 

@@ -69,24 +69,24 @@ class Homepage extends React.Component {
         })
         if (e.pageY < $('#DODCornell').offset().top) {
             this.setState({
-                cursorRotation:'rotate(0deg)',
+                cursorRotation: 'rotate(0deg)',
                 cursorImg: IsabellaCursor
             })
         }
         if (e.pageY > $('#DODCornell').offset().top) {
             this.setState({
-                cursorRotation:'rotate(0deg)',
+                cursorRotation: 'rotate(0deg)',
                 cursorImg: SmoothHirecursor
             })
         }
         if (e.pageY > $('#Thesis').offset().top && e.pageY < $('#coder').offset().top) {
             this.setState({
-                cursorRotation:'rotate(0deg)',
+                cursorRotation: 'rotate(0deg)',
                 cursorImg: ThesisCursor
             })
         }
         if (e.pageY > $('#coder').offset().top && e.pageY < $('#Vogether').offset().top) {
-            var xAxis = $("#dearTime").offset().left + window.innerWidth * .4 - e.pageX
+            var xAxis = $("#dearTime").offset().left + window.innerWidth * .3 - e.pageX
             var yAxis = $("#dearTime").offset().top - window.innerHeight * .1 - e.pageY
             // angle of tangent
             var angle = Math.atan2(yAxis, xAxis) * 180 / Math.PI
@@ -98,20 +98,20 @@ class Homepage extends React.Component {
         }
         if (e.pageY > $('#Vogether').offset().top && e.pageY < $('#Venture').offset().top) {
             this.setState({
-                cursorRotation:'rotate(0deg)',
+                cursorRotation: 'rotate(0deg)',
                 cursorImg: VogetherCursor
             })
         }
         if (e.pageY > $('#Venture').offset().top && e.pageY < $('#Contact').offset().top) {
             this.setState({
-                cursorRotation:'rotate(0deg)',
+                cursorRotation: 'rotate(0deg)',
                 cursorImg: VentureCursor
             })
         }
-        
-        if (e.pageY > $('#Contact').offset().top ) {
+
+        if (e.pageY > $('#Contact').offset().top) {
             this.setState({
-                cursorRotation:'rotate(0deg)',
+                cursorRotation: 'rotate(0deg)',
                 cursorImg: ContactCursor
             })
         }
@@ -122,7 +122,7 @@ class Homepage extends React.Component {
 
 
             <div id="parallaxScroll" onMouseMove={this.cursorEffect.bind(this)}>
-                <img style={{
+                {window.innerWidth < 450 ? null : <img style={{
                     position: 'absolute',
                     width: 200,
                     height: 'auto',
@@ -132,15 +132,19 @@ class Homepage extends React.Component {
                     transform: this.state.cursorRotation
                 }}
                     alt="cursorImg"
-                    src={this.state.cursorImg}></img>
+                    src={this.state.cursorImg}></img>}
+
                 <NavigationBar href="#contactPart" contact />
                 <TimeLine height={this.state.timeLineHeight} />
 
 
 
-                <div id="HP_container" className='HP_container' >
+                <div id="HP_container" className='black HP_container' >
+
+
+
                     {/* landing page */}
-                    <div style={windowHeight} className="sessionContainer landingPart" >
+                    <div style={windowHeight} className="black sessionContainer landingPart" >
                         <div id="landingPart">
                             <div className='HP_Intro'>
                                 {Copyright.landingPage.title} </div>

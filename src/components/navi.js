@@ -11,22 +11,6 @@ class Navi extends Component {
         window.addEventListener('resize', this.width, true);
 
     }
-    width = () => {
-        if (window.innerWidth < 700) {
-            $("#navi").css("display", "none");
-            $(document).on("click", "li", function () {
-                $("#navi").css("display", "none");
-                $(".dropdown").text("Project Navigation");
-            })
-        }
-        if (window.innerWidth > 700) {
-            $("#navi").css("display", "block");
-            $(document).on("click", "li", function () {
-                $("#navi").css("display", "block");
-                $(".dropdown").text("Project Navigation");
-            })
-        }
-    }
     navishow = (e) => {
         e.preventDefault();
         if ($("#navi").css("display") === "block") {
