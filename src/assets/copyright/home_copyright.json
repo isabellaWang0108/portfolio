@@ -3,27 +3,27 @@
         "title": "I’m a product designer with full-stack development experience, looking to join a technology-driven organization."
     },
     "thesis": {
-        "title": "The end of Thesis",
+        "title": "Technology for designers",
         "content": "The exploration of the relationship between human and technology in the near future by going across theories, existing implementation and conceptual mechanization.",
-        "time": "May 2019 – May 2020",
+        "time": "software design",
         "link": "https://thesiscampy.webflow.io"
     },
     "venture": {
-        "title": "Venture begins",
-        "content": "My first effort to fund a company, Alwa. There are rewards from customer discovery, growth in business thinking and lessons on founder compatibility.",
-        "time": "November 2019 – May 2020",
+        "title": "Venture Capital",
+        "content": "My first effort to initiate a company, Alwa. There are rewards from customer discovery, growth in business thinking and lessons on founder compatibility.",
+        "time": "Product management",
         "link":"https://medium.com/@wangxbella0108"
     },
     "vogether": {
         "title": "Have all basic techniques ready",
         "content": "A visually focus experimental project using the most updated tools, like Sketch, InVision, and Principles.",
-        "time": "January 2019 – May 2019",
+        "time": "UX/UI design",
         "link":"vogether"
     },
     "dodCornell": {
         "title": "Product challenge with a multidisciplinary team!",
         "content": "A career-changing experience requiring me to step out of design comfort zone. From the collaboration with MBA, CS and CM students, I learned what a digital product needs to tackle beyond design.",
-        "time": "August – November 2019",
+        "time": "UX design",
         "link":"smoothHire"
     },
     "coder": {
@@ -35,6 +35,6 @@
             "Projects",
             "using those new technologies."
         ],
-        "time": "May – August 2019"
+        "time": "Coding"
     }
 }

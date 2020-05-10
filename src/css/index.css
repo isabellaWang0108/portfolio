@@ -256,9 +256,8 @@ cursor: pointer;
  top: 60px;
  left:0px;
   z-index: 17;
-  position: fixed;
+  position: absolute;
   color:white;
-  overflow: scroll;
 }
 #landingPart, #contactPart{
   margin-top: 10vh;
@@ -412,7 +411,9 @@ cursor: pointer;
 #Venture,#Thesis, #DODCornell,#coder{
   z-Index:5;
 }
-
+#Venture{
+  background-color: white;
+}
 
 
 @media only screen and (max-width: 850px) {

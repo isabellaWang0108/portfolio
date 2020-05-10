@@ -13,6 +13,7 @@ import Campy from "../../assets/images/home/logoCampy.gif"
 import Vogether from "../../assets/images/vogether/2-record.gif"
 // import Thesis from "../../assets/images/home/Thesis.svg"
 import Venture from "../../assets/images/home/venture.png"
+import VentureBG from "../../assets/images/home/ventureBG.svg"
 import DODCornell from "../../assets/images/home/DODCornell.svg"
 import Copyright from "../../assets/copyright/home_copyright.json"
 
@@ -22,6 +23,15 @@ import ArrowDown from "../../components/arrow"
 import Github from "../../assets/images/contact/github.png"
 import Linkedin from "../../assets/images/contact/linkedin.png"
 import ReactGA from 'react-ga';
+
+import IsabellaCursor from "../../assets/images/home/IsabellaCursor.png"
+import SmoothHirecursor from '../../assets/images/home/smoothHirecursor.png'
+import ThesisCursor from '../../assets/images/home/thesisCursor.png'
+import ArrowCursor from "../../assets/images/home/arrowCursor.png"
+import VogetherCursor from "../../assets/images/home/vogetherCursor.png"
+import VentureCursor from "../../assets/images/home/ventureCursor.svg"
+import ContactCursor from "../../assets/images/home/contactCursor.svg"
+
 
 const windowHeight = {
     height: window.innerWidth < 990 ? window.innerHeight * 1.1 : window.innerHeight,
@@ -37,6 +47,10 @@ const row = {
 class Homepage extends React.Component {
 
     state = {
+        top: 300,
+        left: 300,
+        cursorImg: null,
+        cursorRotation: 'rotate(0deg)',
         password: '0',
         background: 0,
         timeLineHeight: $(document).height()
@@ -46,31 +60,59 @@ class Homepage extends React.Component {
         ReactGA.initialize('UA-148443721-2', { testMode: true });
         ReactGA.pageview(window.location.pathname + window.location.search);
     }
-    handleScroll = e => {
-        e.preventDefault();
-        $('#landingPart').css({
-            'display': 'flex'
+
+    cursorEffect = e => {
+        this.setState({
+            top: e.pageY + 12,
+            left: e.pageX + 12,
+
         })
-        $("#contactPart").css('display', 'none');
-
-        $('#backgrounds').css('opacity', 1)
-        this.setState({ timeLineHeight: $(document).height() })
-
-        // transit BG of landing page's out
-        if (0 < $('#Thesis').position().top) {
-            this.setState({ background: 0 });
-        }
-        // transit BG of venture in page's in
-        if (0 > $('#Thesis').position().top) {
-            this.setState({ background: 1 })
-            $("#landingPart").css('display', 'none')
-        }
-        // transit BG of coder in page's in
-        if (0 > $('#coder').position().top) {
-            $("#contactPart").css('display', 'flex');
+        if (e.pageY < $('#DODCornell').offset().top) {
             this.setState({
-                background: 2,
-                timeLineHeight: 300
+                cursorRotation:'rotate(0deg)',
+                cursorImg: IsabellaCursor
+            })
+        }
+        if (e.pageY > $('#DODCornell').offset().top) {
+            this.setState({
+                cursorRotation:'rotate(0deg)',
+                cursorImg: SmoothHirecursor
+            })
+        }
+        if (e.pageY > $('#Thesis').offset().top && e.pageY < $('#coder').offset().top) {
+            this.setState({
+                cursorRotation:'rotate(0deg)',
+                cursorImg: ThesisCursor
+            })
+        }
+        if (e.pageY > $('#coder').offset().top && e.pageY < $('#Vogether').offset().top) {
+            var xAxis = $("#dearTime").offset().left + window.innerWidth * .4 - e.pageX
+            var yAxis = $("#dearTime").offset().top - window.innerHeight * .1 - e.pageY
+            // angle of tangent
+            var angle = Math.atan2(yAxis, xAxis) * 180 / Math.PI
+
+            this.setState({
+                cursorImg: ArrowCursor,
+                cursorRotation: 'rotate(' + angle + 'deg)'
+            })
+        }
+        if (e.pageY > $('#Vogether').offset().top && e.pageY < $('#Venture').offset().top) {
+            this.setState({
+                cursorRotation:'rotate(0deg)',
+                cursorImg: VogetherCursor
+            })
+        }
+        if (e.pageY > $('#Venture').offset().top && e.pageY < $('#Contact').offset().top) {
+            this.setState({
+                cursorRotation:'rotate(0deg)',
+                cursorImg: VentureCursor
+            })
+        }
+        
+        if (e.pageY > $('#Contact').offset().top && e.pageY) {
+            this.setState({
+                cursorRotation:'rotate(0deg)',
+                cursorImg: ContactCursor
             })
         }
     }
@@ -78,13 +120,27 @@ class Homepage extends React.Component {
     render() {
         return (
 
-            <div id="parallaxScroll" onScroll={this.handleScroll}>
-                <NavigationBar href="#contactPart" contact/>
-                <TimeLine height={this.state.timeLineHeight} />
-                <div id="HP_container" className='HP_container' >
 
+            <div id="parallaxScroll" onMouseMove={this.cursorEffect.bind(this)}>
+                <img style={{
+                    position: 'absolute',
+                    width: 200,
+                    height: 'auto',
+                    zIndex: 999,
+                    top: this.state.top,
+                    left: this.state.left,
+                    transform: this.state.cursorRotation
+                }}
+                    alt="cursorImg"
+                    src={this.state.cursorImg}></img>
+                <NavigationBar href="#contactPart" contact />
+                <TimeLine height={this.state.timeLineHeight} />
+
+
+
+                <div id="HP_container" className='HP_container' >
                     {/* landing page */}
-                    <div style={windowHeight} className="sessionContainer landingPart">
+                    <div style={windowHeight} className="sessionContainer landingPart" >
                         <div id="landingPart">
                             <div className='HP_Intro'>
                                 {Copyright.landingPage.title} </div>
@@ -117,7 +173,7 @@ class Homepage extends React.Component {
                     </div>
 
                     {/* product studio */}
-                    <div id="DODCornell" className="black sessionContainer DODCornell" style={windowHeight}>
+                    <div id="DODCornell" className="black sessionContainer DODCornell" style={windowHeight} >
                         <div className="contentblock">
                             <img src={DODCornell} className="DODCornellImg" alt="DODCornell"></img>
                         </div>
@@ -180,6 +236,87 @@ class Homepage extends React.Component {
                     </div>
 
 
+                    {/* Fullstack coding */}
+                    <div id="coder" className="black " style={windowHeight}>
+                        {/* <div className="sessionContainer"> */}
+
+                        <TimeStamp
+                            time={Copyright.coder.time}
+                            color="white"
+                        />
+                        <div className='HP_Intro coder' >{Copyright.coder.title}</div>
+                        <div className='HP_descrip coder'>
+                            <div className="indentInCoder"><span className="greyCode codeDefineIndent">var NewTechnologies</span> = [Javascript, Node.js, React.js, Bootstrap,Firebase, MySQL, MongoDB, Express.js, Chai.js, Mocha.js]
+                            </div>
+                            <br />
+                            <div>
+                                <div className="indentInCoder yellowCode"> <span className="greyCode codeDefineIndent">var Projects</span> <span className="pinkCode">=</span>
+                                        [<br />
+                                    <br />
+                                        &#123;name: "Flocker", type: ‘Matching app’,
+                                        <a className="greenCode" rel="noopener noreferrer"
+                                        target="_blank"
+                                        href="https://github.com/wangx733/flocker"
+                                        onClick={() => {
+                                            console.log('flocker from homeBlock')
+                                            ReactGA.event({
+                                                category: 'direct to link',
+                                                action: 'flocker from homeBlock'
+                                            })
+                                        }}>link</a>&#125;,</div>
+                                <br />
+                                <div className="indentInCoder yellowCode" id="dearTime"> &#123;name: "DearTime", type: "UX engineering",
+                                <a className="greenCode" rel="noopener noreferrer"
+                                        target="_blank"
+                                        onClick={() => {
+                                            console.log('dearTime from homeBlock')
+                                            ReactGA.event({
+                                                category: 'direct to link',
+                                                action: 'dearTime from homeBlock'
+                                            })
+                                        }}
+                                        href="https://github.com/wangx733/dearTime"
+                                    >link</a>&#125;,</div>
+                                <br />
+                                <div className="indentInCoder yellowCode"> &#123;name: "Bamazon", type: "Cli app",
+                                 <a className="greenCode" rel="noopener noreferrer"
+                                        target="_blank"
+                                        onClick={() => {
+                                            console.log('bamazon from homeBlock')
+                                            ReactGA.event({
+                                                category: 'direct to link',
+                                                action: 'bamazon from homeBlock'
+                                            })
+                                        }}
+                                        href="https://github.com/wangx733/Bamazon_Cli_App"
+                                    >link</a> &#125;</div>
+                                <br />
+                                <div className="indentInCoder yellowCode">]</div>
+                                <br />
+                            </div>
+                            {
+
+                                <div>
+                                    {
+                                        Copyright.coder.content.map((item, i) => {
+                                            if (i % 2) {
+                                                return <span className="greyCode" key={i}> {item} </span>
+
+                                            }
+                                            else {
+                                                return item
+                                            }
+                                        })
+                                    }
+
+                                </div>
+                            }
+
+                        </div>
+                        {/* </div> */}
+                    </div>
+
+
                     {/* Vogether */}
                     <div id="Vogether" className="white sessionContainer" style={windowHeight}>
                         <div className="contentblock">
@@ -238,92 +375,14 @@ class Homepage extends React.Component {
                         <div className="contentblock">
                             <img src={Venture} alt="venture" className="img ventureImg"></img>
                         </div>
+                        <img src={VentureBG} style={{ bottom: 0, left: 0, position: 'absolute', opacity: 1 }} className={VentureBG} alt="VentureBG"></img>
+
                     </div>
 
 
-
-                    {/* Fullstack coding */}
-                    <div id="coder" className="black " style={windowHeight}>
-                        {/* <div className="sessionContainer"> */}
-
-                        <TimeStamp
-                            time={Copyright.coder.time}
-                            color="white"
-                        />
-                        <div className='HP_Intro coder' >{Copyright.coder.title}</div>
-                        <div className='HP_descrip coder'>
-                            <div className="indentInCoder"><span className="greyCode codeDefineIndent">var NewTechnologies</span> = [Javascript, Node.js, React.js, Bootstrap,Firebase, MySQL, MongoDB, Express.js, Chai.js, Mocha.js]
-                            </div>
-                            <br />
-                            <div>
-                                <div className="indentInCoder yellowCode"> <span className="greyCode codeDefineIndent">var Projects</span> <span className="pinkCode">=</span>
-                                        [<br />
-                                    <br />
-                                        &#123;name: "Flocker", type: ‘Matching app’,
-                                        <a className="greenCode" rel="noopener noreferrer"
-                                        target="_blank"
-                                        href="https://github.com/wangx733/flocker"
-                                        onClick={() => {
-                                            console.log('flocker from homeBlock')
-                                            ReactGA.event({
-                                                category: 'direct to link',
-                                                action: 'flocker from homeBlock'
-                                            })
-                                        }}>link</a>&#125;,</div>
-                                <br />
-                                <div className="indentInCoder yellowCode"> &#123;name: "DearTime", type: "UX engineering",
-                                <a className="greenCode" rel="noopener noreferrer"
-                                        target="_blank"
-                                        onClick={() => {
-                                            console.log('dearTime from homeBlock')
-                                            ReactGA.event({
-                                                category: 'direct to link',
-                                                action: 'dearTime from homeBlock'
-                                            })
-                                        }}
-                                        href="https://github.com/wangx733/dearTime"
-                                    >link</a>&#125;,</div>
-                                <br />
-                                <div className="indentInCoder yellowCode"> &#123;name: "Bamazon", type: "Cli app",
-                                 <a className="greenCode" rel="noopener noreferrer"
-                                        target="_blank"
-                                        onClick={() => {
-                                            console.log('bamazon from homeBlock')
-                                            ReactGA.event({
-                                                category: 'direct to link',
-                                                action: 'bamazon from homeBlock'
-                                            })
-                                        }}
-                                        href="https://github.com/wangx733/Bamazon_Cli_App"
-                                    >link</a> &#125;</div>
-                                <br />
-                                <div className="indentInCoder yellowCode">]</div>
-                                <br />
-                            </div>
-                            {
-
-                                <div>
-                                    {
-                                        Copyright.coder.content.map((item, i) => {
-                                            if (i % 2) {
-                                                return <span className="greyCode" key={i}> {item} </span>
-
-                                            }
-                                            else {
-                                                return item
-                                            }
-                                        })
-                                    }
-
-                                </div>
-                            }
-
-                        </div>
-                        {/* </div> */}
-                    </div>
 
                     {/* contact */}
-                    <div style={windowHeight} className="sessionContainer white contactPart">
+                    <div style={windowHeight} id="Contact" className="sessionContainer white contactPart">
                         <div id="contactPart">
 
                             <div style={row}>

@@ -104,7 +104,7 @@ class Recruitment extends React.Component {
 
                 {/* navigation bar ==============================================================================================  */}
                 <div id="navi" className="animated slideInDown">
-                   
+
                     <Goback />
                     <div id="content" style={{ background: '#F1F1F1' }}>
 
@@ -164,7 +164,7 @@ class Recruitment extends React.Component {
                     <Paragraph banner={pro3} title={Copyright.smoothHire.title[2]} val="pp2" class="pp2">
                         <p>This is 2019, there are probably people already realize the problem and trying to solve that. With the major pain points in mind, we looked into other people's solutions to the pain points.
                        <br />
-                        here is what we learned from our ancestors:
+                        Here is what we learned from our ancestors:
                         </p>
                         <Bullet a="Automation is dangerous. Candidates want a touch of human during the recruitment, but automation struggles on giving personal messages."
                             b="Recruitment is a two-side market, but we have to pick our side either help recruiters to do their jobs easier or provide better experience for candidates. "
