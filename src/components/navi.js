@@ -3,9 +3,6 @@ import $ from 'jquery';
 
 class Navi extends Component {
 
-    // componentWillUnmount() {
-    //     window.removeEventListener('scroll', this.handleScroll);
-    // }
 
     componentDidMount() {
         window.addEventListener('resize', this.width, true);

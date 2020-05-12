@@ -1,7 +1,7 @@
 {
     "smoothHire": {
-        "challenge": "This is a product challenge given by US Department of Defense on how to hire millennial technical talents within four months",
-        "team":"A multi-multidisciplinary team with 4 people from business, Computer science, Connected media and design background",
+        "challenge": "This is a four-months product challenge given by US Department of Defense on investigating how to hire millennial technical talents",
+        "team": "A multi-multidisciplinary team with 4 people from business, Computer science, Connected media and design background",
         "name": "smoothHire",
         "myrole": [
             "Sourced relevant players and conducted interviews",
@@ -37,7 +37,7 @@
         ]
     },
     "vogether": {
-        "challenge": "What should an interface like to help people seek immediate attention",
+        "challenge": "This is a personal visual design experimentation on what should an interface look like to help people seek immediate attention",
         "descrip": "Inspired by the behavior of people watching, Vogether creates an experience that contains motivation and satisfaction brought by people watching.",
         "name": "Vogether",
         "myrole": [
@@ -48,19 +48,23 @@
         "for": "Mobile app",
         "title": [
             "User Research",
-            "Competitive position",
             "Storyboarding",
-            "Block Frames",
-            "Prototype",
-            "User test and iteration",
+            "Competitive position",
             "User flow",
+            "Prototype",
+            "Usability test",
             "Product demo",
             "Privacy concerns"
         ],
         "content": {
             "research": [
-                "We interviewed around 20 people, including fresh graduates from top university, bootcamp students, career switchers, recruiters and C-cuites from Tech startups.\n From research, we found"
-            ]
+                "To get to know the subject matter, I intentionally bring the topic up during my conversation with friends, family, and strangers on the subway and document my observations in a notebook. I realize lots of time, when people actively talk to strangers (except for the case of a social norm), they have no interest in building a relationship in advance, but out of curiosity of how other human beings are doing. There are lots of solutions to seek immediate attention, both digital and analog. From a digital perspective, social media play a big role in satisfying that curiosity. From the many options, I choose to take my exploration further on the relationship between social behavior and interface."
+            ],
+            "storyBoarding": "I used storyboarding method to Brainstorm on possible solutions. I decided to play around user input and interaction to see how they effect the user emotion.",
+            "competitor": " In addition to brainstorm on design elements, like input and interaction, I collected and categorized the products I can find, like podcasts, Instagram, Facebook, Twitter, to have a general idea of defining my value proposition. Also, I showed around my sketches to friends and professors to evaluate the feasibility and pick user input or interaction. Below is a comparison of how I define myself among all products that deliver the same value. If you want to know more about how I pick the direction, contact me!",
+            "prototype": "Based on the outline of user flow, I used Sketch to make prototypes that contain all the functionalities and content for the first round of usability tests. My core concept was to allow users to express their emotions and being able to have as much response as it can be towards the voice pose. In my design system, I used color to represent the emotion, a low-bar prompt to facilitate more responses from users and an optional busy screen to simulate a feeling of being surrounded by humans. ",
+            "userFlow": "After figuring out the specific plan from sketches, I mapped out a diagram of user flow as the assistance of developing prototypes",
+            "usability": "There were lots of changes made during the process of block-frame and prototyping. I showed each action to five people and observed their reactions and behaviors. During the test, people are more collaborative than I expected, and they pointed out what they think can be improved or what they wish to add directly. However, taking in every single piece of advice I heard can lead to screen creep. People involved in the test may have a different scope or just reflecting what they like in the existing products. I only redesigned the steps that multiple get stuck. For example, I redesigned the scroll up menu on the recording page, because only people who use iPhone X are trained to adapt to this particular pattern. Other mobile users had no clue how to deal with it, or even not realized that it was a menu at all. Thus, I changed the color and put in a verbal indicator to teach my users this new user pattern."
         },
         "otherProjects": [
             {
@@ -70,7 +74,7 @@
         ]
     },
     "campy": {
-        "descrip": "A year long design research project based on the research of current technology's implementation and conceptual mechanization.",
+        "descrip": "This is a year-long design research project based on the research of current technology's implementation and conceptual mechanization.",
         "name": "Thesis – What will we become, now that life means living with computers? ",
         "title": [
             "Topic refinement",

@@ -59,6 +59,7 @@ class Homepage extends React.Component {
     componentDidMount() {
         ReactGA.initialize('UA-148443721-2', { testMode: true });
         ReactGA.pageview(window.location.pathname + window.location.search);
+
     }
 
     cursorEffect = e => {
@@ -122,6 +123,7 @@ class Homepage extends React.Component {
 
 
             <div id="parallaxScroll" onMouseMove={this.cursorEffect.bind(this)}>
+                {/* the cursor */}
                 {window.innerWidth < 450 ? null : <img style={{
                     position: 'absolute',
                     width: 200,
@@ -134,7 +136,9 @@ class Homepage extends React.Component {
                     alt="cursorImg"
                     src={this.state.cursorImg}></img>}
 
+                {/* navigation bar */}
                 <NavigationBar href="#contactPart" contact />
+                <div id="HomapageTopNavi" style={{ backgroundColor: 'white'}}></div>
                 <TimeLine height={this.state.timeLineHeight} />
 
 
@@ -162,7 +166,8 @@ class Homepage extends React.Component {
                                         action: 'Thesis from intro'
                                     })}
                                     className="Alllinks" href="https://thesiscampy.webflow.io">thesis</a> &nbsp;and Cornell Tech solving
-                            &nbsp;<Link onClick={() => ReactGA.event({
+                            &nbsp;<Link
+                                    onClick={() => ReactGA.event({
                                         category: 'direct to link',
                                         action: 'product studio from intro'
                                     })}
