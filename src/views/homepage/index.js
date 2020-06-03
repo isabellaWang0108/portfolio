@@ -34,7 +34,7 @@ import ContactCursor from "../../assets/images/home/contactCursor.png"
 
 
 const windowHeight = {
-    height: window.innerWidth < 990 ? window.innerHeight * 1.1 : window.innerHeight,
+    height: window.innerWidth < 990 ? window.innerHeight * 1.2 : window.innerHeight,
     minHeight: 600,
     position: 'relative',
 }
@@ -265,7 +265,7 @@ class Homepage extends React.Component {
                                         &#123;name: "Flocker", type: ‘Matching app’,
                                         <a className="greenCode" rel="noopener noreferrer"
                                         target="_blank"
-                                        href="https://github.com/wangx733/flocker"
+                                        href="https://github.com/isabellawang0108/flocker"
                                         onClick={() => {
                                             console.log('flocker from homeBlock')
                                             ReactGA.event({
@@ -284,7 +284,7 @@ class Homepage extends React.Component {
                                                 action: 'dearTime from homeBlock'
                                             })
                                         }}
-                                        href="https://github.com/wangx733/dearTime"
+                                        href="https://github.com/isabellawang0108/dearTime"
                                     >link</a>&#125;,</div>
                                 <br />
                                 <div className="indentInCoder yellowCode"> &#123;name: "Bamazon", type: "Cli app",
@@ -297,7 +297,7 @@ class Homepage extends React.Component {
                                                 action: 'bamazon from homeBlock'
                                             })
                                         }}
-                                        href="https://github.com/wangx733/Bamazon_Cli_App"
+                                        href="https://github.com/isabellawang0108/Bamazon_Cli_App"
                                     >link</a> &#125;</div>
                                 <br />
                                 <div className="indentInCoder yellowCode">]</div>
@@ -400,7 +400,7 @@ class Homepage extends React.Component {
                             </div>
 
                             <div style={row}>
-                                <a href="https://github.com/wangx733">
+                                <a href="https://github.com/isabellawang0108">
                                     <img src={Github} alt="icon"></img>
                                 </a>
                             </div>

@@ -157,8 +157,8 @@ class Recruitment extends React.Component {
                         </Paragraph>
                         <Paragraph noImg={true} title={Copyright.campy.title[2]} val="pp2" class="pp2">
                             <p>{Copyright.campy.paragraph3}  </p>
-                            <a href="https://wangx733.github.io/IdealationVote/">Link to website</a>
-                            <iframe src="https://wangx733.github.io/IdealationVote/"
+                            <a href="https://isabellaWang0108.github.io/IdealationVote/">Link to website</a>
+                            <iframe src="https://isabellaWang0108.github.io/IdealationVote/"
                                 allowFullScreen
                                 title="ideationVote"
                                 // sandbox="allow-same-origin"
@@ -175,11 +175,11 @@ class Recruitment extends React.Component {
                         </Paragraph>
                         <Paragraph noImg={true} title={Copyright.campy.title[4]} val="pp4" class="pp4">
                             <p>{Copyright.campy.paragraph5}</p>
-                            <a href="https://wangx733.github.io/3Dprogramming/"
+                            <a href="https://isabellaWang0108.github.io/3Dprogramming/"
                                 target="_blank" rel="noopener noreferrer">
                                 View it fullscreen
                             </a>
-                            <iframe src="https://wangx733.github.io/3Dprogramming/"
+                            <iframe src="https://isabellaWang0108.github.io/3Dprogramming/"
                                 allowFullScreen
                                 title="see as data scientist"
                                 // sandbox="allow-same-origin"

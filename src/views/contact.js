@@ -44,7 +44,7 @@ class Contact extends React.Component {
                             </div>
 
                             <div style={row}>
-                                <a href="https://github.com/wangx733">
+                                <a href="https://github.com/isabellaWang0108">
                                     <img src={Github} alt="icon"></img>
                                 </a>
                             </div>
