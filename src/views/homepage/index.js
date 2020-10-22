@@ -204,35 +204,15 @@ class Homepage extends React.Component {
                     <div style={windowHeight} className="black sessionContainer landingPart" >
                         <div id="landingPart">
                             <div className='landingpage_Intro animate__animated animate__fadeInLeft'>
-                                {/* {Copyright.landingPage.title} </div>
-                            <div className='HP_descrip'> */}
-                              Hello - I'm a product designer who can program
-                            {/* &nbsp;<a onClick={() => ReactGA.event({
-                                category: 'direct to link',
-                                action: 'Voice'
-                            })}
-                                    style={{ fontFamily:'SuisseIntl-Regular', color:'black'}}
-                                    href="https://voice.com/learn-more/">a software company</a>&nbsp; */}
+                       
+                              Hello - I'm a product designer who with full-stack programming experience
+                          
                             </div>
-
-
-                            {/* <Canvas
-
-                                camera={{ position: [0, 0, -2] }}
-                            // style={{ position: 'absolute', right: '0%', top: '10px' }}
-                            >
-                                <ambientLight />
-                                <pointLight position={[150, 150, 150]} intensity={0.55} />
-                                <Suspense fallback={null}>
-                                    <Box />
-                                </Suspense>
-
-                            </Canvas> */}
 
 
                         </div>
                         <Canvas
-                            style={{ position: 'absolute', right: '0px', top: '0px', width: '60%' }}
+                            style={{ position: 'fixed', right: '0px', top: '0px', width: '60%' }}
                             // gl={{ antialias: false, alpha: false }}
                             camera={{ position: [3, 5, 15] }}
                             // onCreated={({ gl }) => gl.setClearColor('lightpink')}
