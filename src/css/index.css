@@ -253,11 +253,12 @@ cursor: pointer;
   flex-direction: row;
   width:100vw;
   height:100vh;
- top: 60px;
  left:0px;
+ top:0px;
   z-index: 17;
   position: absolute;
   color:white;
+  background-color: rgba(255, 182, 193, 0.507);
 }
 #landingPart, #contactPart{
   margin-top: 10vh;
@@ -267,6 +268,10 @@ cursor: pointer;
   align-self: flex-start;
   width:70%;
   z-Index:2;
+}
+#landingPart{
+  display:flex;
+  flex-direction: row;
 }
 #contactPart{
   flex-direction: row;
@@ -287,6 +292,14 @@ cursor: pointer;
   font-family: 'SuisseIntl-SemiBold';
   z-index: 10;
 }
+.landingpage_Intro{
+  font-size: 64px;
+  margin-top: 15%;
+  color:black;
+  width:70%;
+  font-family: 'SuisseIntl-Semibold';
+}
+
 .HP_descrip,.Alllinks{
   font-size:21px;
   margin-top: 24px;

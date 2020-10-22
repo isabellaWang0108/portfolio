@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import ReactDOM from 'react-dom'
+import React, { useState, Suspense, useRef, useMemo, useEffect } from "react";
 import $ from 'jquery';
 import "../../css/index.css"
+import { Canvas, useFrame, useLoader } from 'react-three-fiber'
+import niceColors from 'nice-color-palettes'
+import * as THREE from 'three'
 
 import TimeStamp from "../../components/timeStampInHP"
 import TimeLine from "../../components/timeLine"
 import NavigationBar from "../../components/navigation"
-import LandingPageAnimation from "../../components/landingPageAnimation"
+import Matrix from "../../assets/images/home/data.png"
+// import LandingPageAnimation from "../../components/landingPageAnimation"
 
 import CampyBG from "../../assets/images/home/CampyBG.svg"
 import Campy from "../../assets/images/home/logoCampy.gif"
@@ -44,12 +49,59 @@ const row = {
 }
 
 
+const tempObject = new THREE.Object3D()
+const tempColor = new THREE.Color()
+const colors = new Array(1000).fill().map(() => niceColors[13][Math.floor(Math.random() * 5)])
+
+
+function Boxes() {
+    const [hovered, set] = useState()
+    const colorArray = useMemo(() =>
+        Float32Array.from(new Array(1500).fill().flatMap((_, i) => tempColor.set(colors[i]).toArray())), []
+    )
+
+    const ref = useRef()
+
+    useFrame(state => {
+        const time = state.clock.getElapsedTime()
+        ref.current.position.x = Math.sin(time / 4) * 2
+        ref.current.position.y = Math.sin(time / 2)
+        ref.current.rotation.x += .007
+        ref.current.rotation.y += .007
+
+        let i = 0
+        for (let x = 0; x < 10; x++)
+
+            for (let y = 0; y < 10; y++)
+
+                for (let z = 0; z < 10; z++) {
+                    const id = i++
+                    tempObject.position.set(5 - x, 5 - y, 5 - z)
+
+                    tempObject.position.multiplyScalar(Math.sin(time) / 10 + 1.2)
+
+                    tempObject.updateMatrix()
+                    ref.current.setMatrixAt(id, tempObject.matrix)
+                }
+        ref.current.instanceMatrix.needsUpdate = true
+    })
+
+    return (
+        <instancedMesh ref={ref} args={[null, null, 1000]}>
+            <sphereBufferGeometry args={[.3, 30, 30]} attach="geometry" >
+                <instancedBufferAttribute attachObject={['attributes', 'color']} args={[colorArray, 3]} />
+            </sphereBufferGeometry>
+            <meshPhongMaterial attach="material" vertexColors={THREE.VertexColors} />
+        </instancedMesh>
+    )
+}
+
 class Homepage extends React.Component {
 
     state = {
         top: 300,
         left: 300,
-        cursorImg: null,
+        cursorImg: ' ',
         cursorRotation: 'rotate(0deg)',
         password: '0',
         background: 0,
@@ -68,12 +120,12 @@ class Homepage extends React.Component {
             left: e.pageX + 12,
 
         })
-        if (e.pageY < $('#DODCornell').offset().top) {
-            this.setState({
-                cursorRotation: 'rotate(0deg)',
-                cursorImg: IsabellaCursor
-            })
-        }
+        // if (e.pageY < $('#DODCornell').offset().top) {
+        //     this.setState({
+        //         cursorRotation: 'rotate(0deg)',
+        //         cursorImg: null
+        //     })
+        // }
         if (e.pageY > $('#DODCornell').offset().top) {
             this.setState({
                 cursorRotation: 'rotate(0deg)',
@@ -113,7 +165,7 @@ class Homepage extends React.Component {
         if (e.pageY > $('#Contact').offset().top) {
             this.setState({
                 cursorRotation: 'rotate(0deg)',
-                cursorImg: ContactCursor
+                cursorImg: IsabellaCursor
             })
         }
     }
@@ -124,7 +176,7 @@ class Homepage extends React.Component {
 
             <div id="parallaxScroll" onMouseMove={this.cursorEffect.bind(this)}>
                 {/* the cursor */}
-                {window.innerWidth < 450 ? null : <img style={{
+                {/* {window.innerWidth < 450 ? null : <img style={{
                     position: 'absolute',
                     width: 200,
                     height: 'auto',
@@ -134,13 +186,14 @@ class Homepage extends React.Component {
                     transform: this.state.cursorRotation
                 }}
                     alt="cursorImg"
-                    src={this.state.cursorImg}></img>}
+                    src={this.state.cursorImg}
+                    >
+                        </img>} */}
 
                 {/* navigation bar */}
                 <NavigationBar href="#contactPart" contact />
-                <div id="HomapageTopNavi" style={{ backgroundColor: 'white'}}></div>
+                <div id="HomapageTopNavi" style={{ backgroundColor: 'white', opacity: '.4' }}></div>
                 <TimeLine height={this.state.timeLineHeight} />
-
 
 
                 <div id="HP_container" className='black HP_container' >
@@ -150,35 +203,44 @@ class Homepage extends React.Component {
                     {/* landing page */}
                     <div style={windowHeight} className="black sessionContainer landingPart" >
                         <div id="landingPart">
-                            <div className='HP_Intro'>
-                                {Copyright.landingPage.title} </div>
-                            <div className='HP_descrip'>
-                                Recently, I worked as front-end engineer and lead designer at a startup
-                            &nbsp;<a onClick={() => ReactGA.event({
+                            <div className='landingpage_Intro animate__animated animate__fadeInLeft'>
+                                {/* {Copyright.landingPage.title} </div>
+                            <div className='HP_descrip'> */}
+                              Hello - I'm a product designer who can program
+                            {/* &nbsp;<a onClick={() => ReactGA.event({
                                 category: 'direct to link',
-                                action: 'AwareHealth'
+                                action: 'Voice'
                             })}
-                                    className="Alllinks"
-                                    href="https://www.getawarehealth.com">AwareHealth</a>&nbsp;
-                            while I went to school at Parsons finishing up my
-                            &nbsp;<a onClick={() => ReactGA.event({
-                                        category: 'direct to link',
-                                        action: 'Thesis from intro'
-                                    })}
-                                    className="Alllinks" href="https://thesiscampy.webflow.io">thesis</a> &nbsp;and Cornell Tech solving
-                            &nbsp;<Link
-                                    onClick={() => ReactGA.event({
-                                        category: 'direct to link',
-                                        action: 'product studio from intro'
-                                    })}
-                                    className="Alllinks" to="smoothHire">product challenge</Link> &nbsp;from Department of Defense.
+                                    style={{ fontFamily:'SuisseIntl-Regular', color:'black'}}
+                                    href="https://voice.com/learn-more/">a software company</a>&nbsp; */}
                             </div>
 
-                            <div className="HP_downArr">
-                                <div> &nbsp;&nbsp; Career key projects </div>
-                                <ArrowDown />
-                            </div>
+
+                            {/* <Canvas
+
+                                camera={{ position: [0, 0, -2] }}
+                            // style={{ position: 'absolute', right: '0%', top: '10px' }}
+                            >
+                                <ambientLight />
+                                <pointLight position={[150, 150, 150]} intensity={0.55} />
+                                <Suspense fallback={null}>
+                                    <Box />
+                                </Suspense>
+
+                            </Canvas> */}
+
+
                         </div>
+                        <Canvas
+                            style={{ position: 'absolute', right: '0px', top: '0px', width: '60%' }}
+                            // gl={{ antialias: false, alpha: false }}
+                            camera={{ position: [3, 5, 15] }}
+                            // onCreated={({ gl }) => gl.setClearColor('lightpink')}
+                        >
+                            <ambientLight color="#FFFFFF" />
+                            <pointLight position={[150, 150, 150]} intensity={0.8} />
+                            <Boxes />
+                        </Canvas>
                     </div>
 
                     {/* product studio */}
@@ -406,7 +468,7 @@ class Homepage extends React.Component {
                             </div>
 
                             <div style={row}>
-                                <a href="https://www.linkedin.com/in/isabella-w-310181149/">
+                                <a href="https://www.linkedin.com/in/isabella-wang-310181149/">
                                     <img src={Linkedin} alt="icon"></img>
                                 </a>
                             </div>
@@ -418,9 +480,9 @@ class Homepage extends React.Component {
 
 
                 </div>
-                <div id="backgrounds">
+                {/* <div id="backgrounds">
                     <LandingPageAnimation backgroundNmb={this.state.background} />
-                </div>
+                </div> */}
 
             </div >
         );
