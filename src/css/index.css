@@ -293,7 +293,7 @@ cursor: pointer;
   z-index: 10;
 }
 .landingpage_Intro{
-  font-size: 64px;
+  font-size: 40pt;
   margin-top: 15%;
   color:black;
   width:70%;
@@ -321,11 +321,24 @@ cursor: pointer;
   align-items: center;
   padding-left: 10%;
   width:90%;
+  z-index: 100;
 }
 
 .contentblock{
   width:45%;
   margin-right: 2.5%;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.imgBlock{
+  width:60%;
+  margin-right: 0;
+  align-content: space-around;
+  justify-content: space-around;
+}
+.textBlock{
+  width:40%;
+  margin-right: 0;
   align-content: space-around;
   justify-content: space-around;
 }
@@ -436,6 +449,11 @@ cursor: pointer;
   background-color:red; 
   z-index:40
 }
+
+#voice{
+  padding-left: 0%;
+  background-color: white;
+}
 @media only screen and (max-width: 850px) {
 
   .card{
@@ -489,6 +507,8 @@ cursor: pointer;
     .HP_descrip,.Alllinks,.Alllinks{
       font-size: 18px;
     }
+
+  
 }
 
 @media only screen and (max-width: 700px) {

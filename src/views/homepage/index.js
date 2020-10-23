@@ -21,6 +21,7 @@ import Venture from "../../assets/images/home/venture.png"
 import VentureBG from "../../assets/images/home/ventureBG.svg"
 import DODCornell from "../../assets/images/home/DODCornell.svg"
 import Copyright from "../../assets/copyright/home_copyright.json"
+import Voice from "../../assets/images/home/voice.png"
 
 import PinkButton from "../../components/pinkButton"
 import ArrowDown from "../../components/arrow"
@@ -211,8 +212,11 @@ class Homepage extends React.Component {
 
 
                         </div>
+                        <div>
+                            
+                        </div>
                         <Canvas
-                            style={{ position: 'fixed', right: '0px', top: '0px', width: '60%' }}
+                            style={{ position: 'fixed', right: '0px', top: '0px', width: '60%', zIndex:1 }}
                             // gl={{ antialias: false, alpha: false }}
                             camera={{ position: [3, 5, 15] }}
                             // onCreated={({ gl }) => gl.setClearColor('lightpink')}
@@ -222,6 +226,39 @@ class Homepage extends React.Component {
                             <Boxes />
                         </Canvas>
                     </div>
+
+                    {/* product studio */}
+                    <div id="voice" className="black sessionContainer voice" style={windowHeight} >
+                        <div className="imgBlock">
+                            <img src={Voice} style={{width:'100%'}} alt="voice"></img>
+                        </div>
+                        <div className="textBlock">
+                            <TimeStamp
+                                time="product design"
+                                color="black"
+                            />
+                            <div className='HP_Intro'>Take Social Back From Big Tech</div>
+                            <div className='HP_descrip'>
+                                {Copyright.dodCornell.content}
+                                <br />
+                                <PinkButton
+                                    onClick={() => {
+                                        console.log('product studio from homeBlock')
+                                        ReactGA.event({
+                                            category: 'direct to link',
+                                            action: 'product studio from homeBlock'
+                                        })
+                                    }}
+                                    innerLink={true}
+                                    label="See process"
+                                    link={Copyright.dodCornell.link}
+                                />
+                            </div>
+                        </div>
+
+                    </div>
+
+
 
                     {/* product studio */}
                     <div id="DODCornell" className="black sessionContainer DODCornell" style={windowHeight} >
