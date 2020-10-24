@@ -21,13 +21,13 @@ import Venture from "../../assets/images/home/venture.png"
 import VentureBG from "../../assets/images/home/ventureBG.svg"
 import DODCornell from "../../assets/images/home/DODCornell.svg"
 import Copyright from "../../assets/copyright/home_copyright.json"
-import Voice from "../../assets/images/home/voice.png"
+import Voice from "../../assets/images/home/voice.svg"
 
 import PinkButton from "../../components/pinkButton"
 import ArrowDown from "../../components/arrow"
 
-import Github from "../../assets/images/contact/github.png"
-import Linkedin from "../../assets/images/contact/linkedin.png"
+import Github from "../../assets/images/contact/github.svg"
+import Linkedin from "../../assets/images/contact/linkedin.svg"
 import ReactGA from 'react-ga';
 
 import IsabellaCursor from "../../assets/images/home/IsabellaCursor.png"
@@ -46,7 +46,7 @@ const windowHeight = {
 }
 const row = {
     marginLeft: '10%',
-    marginTop: 24
+    marginTop: '12px'
 }
 
 
@@ -194,8 +194,6 @@ class Homepage extends React.Component {
                 {/* navigation bar */}
                 <NavigationBar href="#contactPart" contact />
                 <div id="HomapageTopNavi" style={{ backgroundColor: 'white', opacity: '.4' }}></div>
-                <TimeLine height={this.state.timeLineHeight} />
-
 
                 <div id="HP_container" className='black HP_container' >
 
@@ -206,7 +204,7 @@ class Homepage extends React.Component {
                         <div id="landingPart">
                             <div className='landingpage_Intro animate__animated animate__fadeInLeft'>
                        
-                              Hello - I'm a product designer who with full-stack programming experience
+                              Hello - I'm a product designer with full stack programming experience
                           
                             </div>
 
@@ -237,8 +235,8 @@ class Homepage extends React.Component {
                                 time="product design"
                                 color="black"
                             />
-                            <div className='HP_Intro'>Take Social Back From Big Tech</div>
-                            <div className='HP_descrip'>
+                            <h3>Take Social Back From Big Tech</h3>
+                            <p>
                                 {Copyright.dodCornell.content}
                                 <br />
                                 <PinkButton
@@ -253,7 +251,7 @@ class Homepage extends React.Component {
                                     label="See process"
                                     link={Copyright.dodCornell.link}
                                 />
-                            </div>
+                            </p>
                         </div>
 
                     </div>
@@ -270,8 +268,8 @@ class Homepage extends React.Component {
                                 time={Copyright.dodCornell.time}
                                 color="black"
                             />
-                            <div className='HP_Intro'>{Copyright.dodCornell.title}</div>
-                            <div className='HP_descrip'>
+                            <h3>{Copyright.dodCornell.title}</h3>
+                            <p>
                                 {Copyright.dodCornell.content}
                                 <br />
                                 <PinkButton
@@ -286,7 +284,7 @@ class Homepage extends React.Component {
                                     label="See process"
                                     link={Copyright.dodCornell.link}
                                 />
-                            </div>
+                            </p>
                         </div>
 
                     </div>
@@ -299,8 +297,8 @@ class Homepage extends React.Component {
                                 time={Copyright.thesis.time}
                                 color='black'
                             />
-                            <div className='HP_Intro' > {Copyright.thesis.title}</div>
-                            <div className='HP_descrip'>{Copyright.thesis.content}
+                            <h3 > {Copyright.thesis.title}</h3>
+                            <p>{Copyright.thesis.content}
                                 <br />
                                 <PinkButton
                                     onClick={() => {
@@ -315,7 +313,7 @@ class Homepage extends React.Component {
                                     link={Copyright.thesis.link}
 
                                 />
-                            </div>
+                            </p>
                         </div>
                         <div className="contentblock">
                             <img src={Campy} alt="campy" className="campy img" />
@@ -332,8 +330,8 @@ class Homepage extends React.Component {
                             time={Copyright.coder.time}
                             color="white"
                         />
-                        <div className='HP_Intro coder' >{Copyright.coder.title}</div>
-                        <div className='HP_descrip coder'>
+                        <h3 >{Copyright.coder.title}</h3>
+                        <p className='coder'>
                             <div className="indentInCoder"><span className="greyCode codeDefineIndent">var NewTechnologies</span> = [Javascript, Node.js, React.js, Bootstrap,Firebase, MySQL, MongoDB, Express.js, Chai.js, Mocha.js]
                             </div>
                             <br />
@@ -400,7 +398,7 @@ class Homepage extends React.Component {
                                 </div>
                             }
 
-                        </div>
+                        </p>
                         {/* </div> */}
                     </div>
 
@@ -412,10 +410,10 @@ class Homepage extends React.Component {
                                 time={Copyright.vogether.time}
                                 color="white"
                             />
-                            <div className='HP_Intro' >{Copyright.vogether.title}</div>
-                            <div className='HP_descrip' >
+                            <h3 >{Copyright.vogether.title}</h3>
+                            <p >
                                 {Copyright.vogether.content}
-                            </div>
+                            </p>
                             <PinkButton
                                 onClick={() => {
                                     console.log('Vogetherfrom homeBlock')
@@ -443,10 +441,10 @@ class Homepage extends React.Component {
                                 time={Copyright.venture.time}
                                 color="black"
                             />
-                            <div className='HP_Intro' >{Copyright.venture.title}</div>
-                            <div className='HP_descrip' >
+                            <h3 >{Copyright.venture.title}</h3>
+                            <p >
                                 {Copyright.venture.content}
-                            </div>
+                            </p>
                             <PinkButton
                                 onClick={() => {
                                     console.log('venture from homeBlock')
@@ -473,24 +471,19 @@ class Homepage extends React.Component {
                     <div style={windowHeight} id="Contact" className="sessionContainer white contactPart">
                         <div id="contactPart">
 
-                            <div style={row}>
-                                <h2 className="pink"> wangxbella0108@gmail.com</h2>
-                                <h2 className="pink"> +1 (908) 391 – 6750</h2>
-                            </div>
-
-                            <div style={row}>
-                                <a href="https://github.com/isabellawang0108">
-                                    <img src={Github} alt="icon"></img>
+                        <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-start'}}>
+                            <a href="https://github.com/isabellawang0108" style={{marginRight:'36pt'}}>
+                                    <img style={{width:'36pt'}} src={Github} alt="icon"></img>
                                 </a>
-                            </div>
 
-                            <div style={row}>
                                 <a href="https://www.linkedin.com/in/isabella-wang-310181149/">
-                                    <img src={Linkedin} alt="icon"></img>
+                                    <img style={{width:'36pt'}} src={Linkedin} alt="icon"></img>
                                 </a>
                             </div>
-
-
+                            <div style={row}>
+                                <h2> wangxbella0108@gmail.com</h2>
+                                <h2> +1 (908) 391 – 6750</h2>
+                            </div>
                         </div>
                     </div>
 
