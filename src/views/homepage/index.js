@@ -235,22 +235,9 @@ class Homepage extends React.Component {
                                 time="product design"
                                 color="black"
                             />
-                            <h3>Take Social Back From Big Tech</h3>
+                            <h3>Lead design on three products</h3>
                             <p>
-                                {Copyright.dodCornell.content}
-                                <br />
-                                <PinkButton
-                                    onClick={() => {
-                                        console.log('product studio from homeBlock')
-                                        ReactGA.event({
-                                            category: 'direct to link',
-                                            action: 'product studio from homeBlock'
-                                        })
-                                    }}
-                                    innerLink={true}
-                                    label="See process"
-                                    link={Copyright.dodCornell.link}
-                                />
+                            I worked as a product designer at Voice, leading the design of the <a href="https://app.voice.com/" target="_blank">Voice app</a>'s creation feature, built internal process documentation site and <a href="http://design-system.voiceuxlab.com/design/illustrations" target="_blank">design system</a> from the ground up.
                             </p>
                         </div>
 
