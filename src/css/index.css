@@ -315,9 +315,11 @@ cursor: pointer;
   box-orient: horizontal;
   flex-wrap:wrap;
   align-items: center;
-  padding-left: 0;
+  padding-left: 5%;
+  padding-right:5%;
   left:0;
-  width:100%;
+  position: absolute;
+  /* width:95%; */
   z-index: 100;
   overflow: hidden;
 }
@@ -452,9 +454,13 @@ cursor: pointer;
   z-index:40
 }
 
-#voice{
+#voice, #awareHealth{
   padding-left: 0%;
   background-color: white;
+}
+
+#awareHealth{
+  background-color:#F9FBFF;
 }
 @media only screen and (max-width: 850px) {
 

@@ -22,7 +22,7 @@ import VentureBG from "../../assets/images/home/ventureBG.svg"
 import DODCornell from "../../assets/images/home/DODCornell.svg"
 import Copyright from "../../assets/copyright/home_copyright.json"
 import Voice from "../../assets/images/home/voice.svg"
-
+import AwareHealth from "../../assets/images/home/awareHealth.svg"
 import PinkButton from "../../components/pinkButton"
 import ArrowDown from "../../components/arrow"
 
@@ -210,9 +210,6 @@ class Homepage extends React.Component {
 
 
                         </div>
-                        <div>
-                            
-                        </div>
                         <Canvas
                             style={{ position: 'fixed', right: '0px', top: '0px', width: '60%', zIndex:1 }}
                             // gl={{ antialias: false, alpha: false }}
@@ -225,7 +222,7 @@ class Homepage extends React.Component {
                         </Canvas>
                     </div>
 
-                    {/* product studio */}
+                    {/* Voice */}
                     <div id="voice" className="black sessionContainer voice" style={windowHeight} >
                         <div className="imgBlock">
                             <img src={Voice} style={{width:'100%'}} alt="voice"></img>
@@ -242,6 +239,30 @@ class Homepage extends React.Component {
                         </div>
 
                     </div>
+
+
+
+
+                    {/* awareHealth */}
+                     <div id="awareHealth" className="black sessionContainer awareHealth" style={windowHeight} >
+
+                        <div className="contentblock" style={{width:'38%',paddingLeft:'10%'}}>
+                            <TimeStamp
+                                time="product design"
+                                color="black"
+                            />
+                            <h3>Developed my first go-to-production mobile app</h3>
+                            <p>
+                            At AwareHealth, I worked as a front-end engineer developed the authentication, chatting, community features of a GDPR compliant <a href="https://apps.apple.com/us/app/getawarehealth/id1507236576">mental well-being platform</a> using React Native, AWS, Cognito, Amplify, Redux.
+                            </p>
+                        </div>
+
+                        <div className="contentblock">
+                            <img src={AwareHealth} style={{width:'100%'}} alt="voice"></img>
+                        </div>
+                        
+                    </div>
+
 
 
 
