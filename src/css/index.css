@@ -450,8 +450,9 @@ cursor: pointer;
   width: 100%; position: fixed;
   top:0;
   left:0; 
-  background-color:red; 
-  z-index:40
+  z-index:40;
+  background-color:white;
+  opacity:.2;
 }
 
 #voice, #awareHealth{

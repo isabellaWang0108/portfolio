@@ -128,7 +128,7 @@ class Homepage extends React.Component {
 
                 {/* navigation bar */}
                 <NavigationBar href="#contactPart" contact />
-                <div id="HomapageTopNavi" style={{ backgroundColor: 'white', opacity: '.4' }}></div>
+                <div id="HomapageTopNavi" style={{ backgroundColor: ' linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1))'}}></div>
 
                 <div id="HP_container" className='black HP_container' >
 
