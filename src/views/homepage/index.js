@@ -181,7 +181,7 @@ class Homepage extends React.Component {
                     {/* awareHealth */}
                      <div id="awareHealth" className="black sessionContainer awareHealth" style={windowHeight} >
 
-                        <div className="contentblock" style={{width:'38%',paddingLeft:'10%'}}>
+                        <div className="contentblock awareHealthText" >
                             <TimeStamp
                                 time="Fullstack engineering"
                                 color="black"
@@ -298,6 +298,11 @@ class Homepage extends React.Component {
                     {/* startup studio */}
                     <div id="Venture" className="black sessionContainer" style={windowHeight}>
 
+                     
+                        <div className="contentblock">
+                            <img src={Venture} alt="venture" className="img ventureImg"></img>
+                        </div>
+
                         <div className="contentblock">
                             <TimeStamp
                                 time="Entrepreneur"
@@ -319,9 +324,6 @@ class Homepage extends React.Component {
                                 label="Read insights"
                                 link={Copyright.venture.link}
                             />
-                        </div>
-                        <div className="contentblock">
-                            <img src={Venture} alt="venture" className="img ventureImg"></img>
                         </div>
                         <img src={VentureBG} style={{ bottom: 0, left: 0, position: 'absolute', opacity: 1 }} className={VentureBG} alt="VentureBG"></img>
 
