@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f98a6ecc1c913d9d763c3664153c593",
+    "revision": "0b0e8373cc153758a7912a8a7caf1c02",
     "url": "/index.html"
   },
   {
-    "revision": "7a9165a476c6f9fb7734",
-    "url": "/static/css/main.b01545b9.chunk.css"
+    "revision": "ea301ed053a374a80b7f",
+    "url": "/static/css/main.60d7fdb7.chunk.css"
   },
   {
-    "revision": "1574cba31116225504e5",
-    "url": "/static/js/2.8f29b7f8.chunk.js"
+    "revision": "3ec070f0d5c9a078c08e",
+    "url": "/static/js/2.e41c03a5.chunk.js"
   },
   {
     "revision": "eb8713a3c306913c4da32b486f103b93",
-    "url": "/static/js/2.8f29b7f8.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.e41c03a5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7a9165a476c6f9fb7734",
-    "url": "/static/js/main.1372fd55.chunk.js"
+    "revision": "ea301ed053a374a80b7f",
+    "url": "/static/js/main.dd67cabe.chunk.js"
   },
   {
     "revision": "2060b9a7e54a59ab7b07",
@@ -80,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/arrowCursor.31c5d7b6.png"
   },
   {
+    "revision": "c9e09c049da8c22af52b397a5a5ea540",
+    "url": "/static/media/awareHealth.c9e09c04.svg"
+  },
+  {
     "revision": "95aa4422adc04212316eccaa212fa565",
     "url": "/static/media/clippy.95aa4422.jpg"
   },
@@ -128,6 +132,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/gallery2.619040c2.jpg"
   },
   {
+    "revision": "19922a481f597f858e5d124ebbd21e34",
+    "url": "/static/media/github.19922a48.svg"
+  },
+  {
     "revision": "8a519700183b7d1910bc433e305799fa",
     "url": "/static/media/hi.8a519700.jpeg"
   },
@@ -142,6 +150,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "813bcb6ac7e1301e41ccdd28658ece3d",
     "url": "/static/media/landingPg.813bcb6a.png"
+  },
+  {
+    "revision": "d295db7368c319313e61f904ffa8074b",
+    "url": "/static/media/linkedin.d295db73.svg"
   },
   {
     "revision": "c8139f2e6f93a7bf36def7268d3df776",
@@ -234,6 +246,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9db3df4889ac314fb48163c0f6fa562f",
     "url": "/static/media/vogetherCursor.9db3df48.png"
+  },
+  {
+    "revision": "50a534ea8526580367e00ca55848c986",
+    "url": "/static/media/voice.50a534ea.svg"
   },
   {
     "revision": "22c84b0b7db0b1eb58aad888df7da6d5",

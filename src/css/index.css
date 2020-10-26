@@ -264,7 +264,7 @@ cursor: pointer;
   flex-direction: row;
   align-items: flex-start;
   align-self: flex-start;
-  width:50%;
+  width:55%;
   z-Index:2;
 }
 #contactPart{
@@ -287,8 +287,9 @@ cursor: pointer;
   z-index: 10;
 }
 .landingpage_Intro{
-  font-size: 40pt;
-  margin-top: 15%;
+  font-size: 3.3em;
+  margin-top: 25%;
+  vertical-align:middle;
   color:black;
   margin-left: 10%;
   font-family: 'SuisseIntl-Semibold';
