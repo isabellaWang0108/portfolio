@@ -251,7 +251,6 @@ cursor: pointer;
   display:inline-block;
   flex-direction: row;
   width:100%;
-  height:100vh;
   left:0px;
   top:0px;
   z-index: 17;
@@ -456,6 +455,7 @@ cursor: pointer;
 
 #voice, #awareHealth{
   padding-left: 0%;
+  padding-top: 0;
   background-color: white;
 }
 
