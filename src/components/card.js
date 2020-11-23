@@ -11,7 +11,7 @@ function Card(props) {
         <div className="card animated fadeInUp">
             <img alt="1" className="cardImg" src={props.img} />
             <div className="Card-content">
-                <h1>{props.title}</h1>
+                <h2>{props.title}</h2>
                 <h3 className="grey">{props.type}</h3>
                 <p className="descrip">{props.descrip}</p>
             </div>

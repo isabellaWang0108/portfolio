@@ -7,6 +7,8 @@ import Contact from "./views/contact.js"
 import Vogether from "./views/projects/vogether"
 import Recruitment from "./views/projects/Recruitment"
 import Thesis from "./views/projects/Campy"
+// import VoiceCreation from './views/projects/voice'
+import Venture from "./views/projects/Venture"
 
 
 class App extends Component {
@@ -36,6 +38,7 @@ class App extends Component {
             <Route exact path={process.env.PUBLIC_URL + "/smoothHire"} component={Recruitment} />
             <Route exact path={process.env.PUBLIC_URL + "/thesis"} component={Thesis} />
             <Route exact path={process.env.PUBLIC_URL + "/contact"} component={Contact} />
+            <Route exact path={process.env.PUBLIC_URL + "/venture"} component={Venture} />
           
           </Switch>
         </HashRouter>

@@ -128,7 +128,7 @@ class Homepage extends React.Component {
 
                 {/* navigation bar */}
                 <NavigationBar href="#contactPart" contact />
-                <div id="HomapageTopNavi" style={{ backgroundColor: ' linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1))'}}></div>
+                <div id="HomapageTopNavi" ></div>
 
                 <div id="HP_container" className='black HP_container' >
 
@@ -155,81 +155,6 @@ class Homepage extends React.Component {
                             <pointLight position={[150, 150, 150]} intensity={0.8} />
                             <Boxes />
                         </Canvas>
-                    </div>
-
-                    {/* Voice */}
-                    <div id="voice" className="black sessionContainer voice" style={windowHeight} >
-                        <div className="imgBlock">
-                            <img src={Voice} style={{width:'100%'}} alt="voice"></img>
-                        </div>
-                        <div className="textBlock">
-                            <TimeStamp
-                                time="Product design"
-                                color="black"
-                            />
-                            <h3>Leading design on three products</h3>
-                            <p>
-                            I worked as a product designer at Voice, leading the design of the <a href="https://app.voice.com/" target="_blank">Voice app</a>'s creation feature, built internal process documentation site and <a href="http://design-system.voiceuxlab.com/design/illustrations" target="_blank">design system</a> from the ground up.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-
-
-                    {/* awareHealth */}
-                     <div id="awareHealth" className="black sessionContainer awareHealth" style={windowHeight} >
-
-                        <div className="contentblock awareHealthText" >
-                            <TimeStamp
-                                time="Fullstack engineering"
-                                color="black"
-                            />
-                            <h3>Developed my first go-to-production mobile app</h3>
-                            <p>
-                            At AwareHealth, I worked as a front-end engineer developed the authentication, chatting, community features of a GDPR compliant <a href="https://apps.apple.com/us/app/getawarehealth/id1507236576" target="_blank">mental well-being platform</a> using React Native, AWS, Cognito, Amplify, Redux.
-                            </p>
-                        </div>
-
-                        <div className="contentblock">
-                            <img src={AwareHealth} style={{width:'100%'}} alt="voice"></img>
-                        </div>
-                        
-                    </div>
-
-
-
-
-                    {/* product studio */}
-                    <div id="DODCornell" className="black sessionContainer DODCornell" style={windowHeight} >
-                        <div className="contentblock">
-                            <img src={DODCornell} className="DODCornellImg" alt="DODCornell"></img>
-                        </div>
-                        <div className="contentblock">
-                            <TimeStamp
-                                time="Product management"
-                                color="black"
-                            />
-                            <h3>{Copyright.dodCornell.title}</h3>
-                            <p>
-                                {Copyright.dodCornell.content}
-                                <br />
-                                <PinkButton
-                                    onClick={() => {
-                                        console.log('product studio from homeBlock')
-                                        ReactGA.event({
-                                            category: 'direct to link',
-                                            action: 'product studio from homeBlock'
-                                        })
-                                    }}
-                                    innerLink={true}
-                                    label="See process"
-                                    link={Copyright.dodCornell.link}
-                                />
-                            </p>
-                        </div>
-
                     </div>
 
                     {/* Thesis Campy */}
@@ -265,6 +190,40 @@ class Homepage extends React.Component {
                     </div>
 
 
+                    {/* product studio */}
+                    <div id="DODCornell" className="black sessionContainer DODCornell" style={windowHeight} >
+                        <div className="contentblock">
+                            <img src={DODCornell} className="DODCornellImg" alt="DODCornell"></img>
+                        </div>
+                        <div className="contentblock">
+                            <TimeStamp
+                                time="Product management"
+                                color="black"
+                            />
+                            <h3>{Copyright.dodCornell.title}</h3>
+                            <p>
+                                {Copyright.dodCornell.content}
+                                <br />
+                                <PinkButton
+                                    onClick={() => {
+                                        console.log('product studio from homeBlock')
+                                        ReactGA.event({
+                                            category: 'direct to link',
+                                            action: 'product studio from homeBlock'
+                                        })
+                                    }}
+                                    innerLink={true}
+                                    label="See process"
+                                    link={Copyright.dodCornell.link}
+                                />
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+
                     {/* Vogether */}
                     <div id="Vogether" className="white sessionContainer" style={windowHeight}>
                         <div className="contentblock">
@@ -272,9 +231,9 @@ class Homepage extends React.Component {
                                 time={Copyright.vogether.time}
                                 color="white"
                             />
-                            <h3 style={{color:'white'}}>{Copyright.vogether.title}</h3>
+                            <h3 style={{color:'white'}}>How does technology impact social</h3>
                             <p style={{color:'white'}}>
-                                {Copyright.vogether.content}
+                            A visually focused experimental project on what should an interface look like to help people seek immediate attention
                             </p>
                             <PinkButton
                                 onClick={() => {
@@ -295,39 +254,65 @@ class Homepage extends React.Component {
                     </div>
 
 
-                    {/* startup studio */}
-                    <div id="Venture" className="black sessionContainer" style={windowHeight}>
+
+
+{/* startup studio */}
+<div id="Venture" className="black sessionContainer" style={windowHeight}>
 
                      
-                        <div className="contentblock">
-                            <img src={Venture} alt="venture" className="img ventureImg"></img>
-                        </div>
+<div className="contentblock">
+    <img src={Venture} alt="venture" className="img ventureImg"></img>
+</div>
 
-                        <div className="contentblock">
-                            <TimeStamp
-                                time="Entrepreneur"
-                                color="black"
-                            />
-                            <h3 >{Copyright.venture.title}</h3>
-                            <p >
-                                {Copyright.venture.content}
-                            </p>
-                            <PinkButton
-                                onClick={() => {
-                                    console.log('venture from homeBlock')
-                                    ReactGA.event({
-                                        category: 'direct to link',
-                                        action: 'venture from homeBlock'
-                                    })
-                                }}
-                                innerLink={false}
-                                label="Read insights"
-                                link={Copyright.venture.link}
-                            />
-                        </div>
-                        <img src={VentureBG} style={{ bottom: 0, left: 0, position: 'absolute', opacity: 1 }} className={VentureBG} alt="VentureBG"></img>
+<div className="contentblock">
+    <TimeStamp
+        time="Entrepreneur"
+        color="black"
+    />
+    <h3 >{Copyright.venture.title}</h3>
+    <p >
+        {Copyright.venture.content}
+    </p>
+    <PinkButton
+        onClick={() => {
+            console.log('venture from homeBlock')
+            ReactGA.event({
+                category: 'direct to link',
+                action: 'venture from homeBlock'
+            })
+        }}
+        innerLink={true}
+        label="Read Insights"
+        link={Copyright.venture.link}
+    />
+</div>
+<img src={VentureBG} style={{ bottom: 0, left: 0, position: 'absolute', opacity: 1 }} className={VentureBG} alt="VentureBG"></img>
 
-                    </div>
+</div>
+
+
+
+
+
+                   {/* awareHealth */}
+                   <div id="awareHealth" className="black sessionContainer awareHealth" style={windowHeight} >
+
+<div className="contentblock awareHealthText" >
+    <TimeStamp
+        time="Fullstack engineering"
+        color="black"
+    />
+    <h3>Built an anonymous local community for lawyers to maintain mental wellness</h3>
+    <p>
+    At AwareHealth, I worked as a front-end engineer developed the authentication, chatting, community features of a GDPR compliant <a href="https://apps.apple.com/us/app/getawarehealth/id1507236576" target="_blank">mental well-being platform</a> using React Native, AWS, Cognito, Amplify, Redux.
+    </p>
+</div>
+
+<div className="contentblock">
+    <img src={AwareHealth} style={{width:'100%'}} alt="voice"></img>
+</div>
+
+</div>
 
 
 
@@ -335,22 +320,26 @@ class Homepage extends React.Component {
                     <div style={windowHeight} id="Contact" className="sessionContainer white contactPart">
                         <div id="contactPart">
 
-                        <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-start'}}>
-                            <a href="https://github.com/isabellawang0108" style={{marginRight:'36pt'}}>
-                                    <img style={{width:'36pt'}} src={Github} alt="icon"></img>
+                        <div style={{alignContent:'center'}}>
+                            <h5 style={{ marginBottom: 0 }}>I would be happy to connect</h5>
+                            <a style={{ color: 'black', fontSize: '16px', textDecoration: 'none', marginTop: 0 }} href="mailto:wangxbella0108@gmail.co">
+                                <p style={{ marginTop: 0 }}>wangxbella0108@gmail.com</p></a>
+                            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
+                                <a href="https://github.com/isabellawang0108" style={{ marginRight: '36pt' }}>
+                                    <img style={{ width: '36pt' }} src={Github} alt="icon"></img>
                                 </a>
 
                                 <a href="https://www.linkedin.com/in/isabella-wang-310181149/">
-                                    <img style={{width:'36pt'}} src={Linkedin} alt="icon"></img>
+                                    <img style={{ width: '36pt' }} src={Linkedin} alt="icon"></img>
                                 </a>
+                                <div style={row}>
+
+                                </div>
                             </div>
-                            <div style={row}>
-                                <h2> wangxbella0108@gmail.com</h2>
-                                <h2> +1 (908) 391 – 6750</h2>
-                            </div>
+
                         </div>
                     </div>
-
+                </div>
 
 
                 </div>

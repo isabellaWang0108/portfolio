@@ -1,4 +1,5 @@
 import React from "react";
+import Arrowback from '../assets/icons/arrow_back.svg'
 
 
 class Back extends React.Component {
@@ -10,11 +11,8 @@ class Back extends React.Component {
     render() {
 
         return (
-
-            <h3 className="pink" style={{ marginLeft: 12, cursor: 'pointer' }} onClick={this.Goback}>
-                <br />
-                &lt; Go back</h3>
-
+            <p  style={{ marginLeft: 12,paddingBottom:12, cursor: 'pointer' }} onClick={this.Goback}> 
+                <img src={Arrowback}/> Go back</p>
         );
     }
 }

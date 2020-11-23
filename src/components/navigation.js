@@ -11,7 +11,7 @@ const navigation = {
     zIndex: 999,
     height: window.innerWidth > 450 ? 60 : 50,
     justifyContent: 'flex-end',
-    paddingTop: 12
+    paddingTop: 12,
 }
 
 const logo = {
@@ -20,7 +20,8 @@ const logo = {
     fontSize: 24,
     position: 'fixed',
     left: 12,
-    top: 12
+    top: 12,
+    backgroundColor:'transparent'
 }
 
 // const yellowColor = {
@@ -36,13 +37,9 @@ class NavigationBar extends Component {
                 {/* logo */}
                 <div style={logo} onClick={this.Logoclick} className="logo bold pink">Isabella Wang</div>
                 {/* contact button */}
-                {this.props.contact ?
-                    <Link to="/contact">
-                        <h1 className="bold pink navigationMargin">contact</h1>
+                    <Link  style={{textDecoration:'none'}} to="/contact">
+                        <h2 className="bold pink navigationMargin">About me</h2>
                     </Link>
-                    : null}
-                {/* project button */}
-                {this.props.projects ? <a className="bold navigationMargin" onClick={this.Logoclick} href='/'>projects</a> : null}
             </div>
         )
     }

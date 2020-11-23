@@ -16,12 +16,12 @@ class Paragraph extends React.Component {
             marginBottom: 42
         }
         return (
-            <div style={{ marginBottom: 84 }} className={this.props.val}>
-                <h1 style={{ fontFamily: 'SuisseIntl-Regular' }} className="pink" value={this.props.val}>{this.props.title}</h1>
+            <div style={{ marginBottom: 84, fontSize:'16pt' }} className={this.props.val}>
+                <h2 style={{ fontFamily: 'SuisseIntl-Regular' }} value={this.props.val}>{this.props.title}</h2>
                 {this.props.children}
                 {this.props.noImg ?
                     null :
-                    this.props.banner ? <img style={this.props.imgShadow?imgShadoe:img} alt=" " src={this.props.banner}></img>
+                    this.props.banner ? <img style={this.props.imgShadow?imgShadoe:img}  src={this.props.banner}></img>
                         : <video style={video} controls autoPlay>
                             <source src={this.props.video} type='video/mp4' />
                         </video>
